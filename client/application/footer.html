@@ -1,0 +1,26 @@
+<!-- FOOTER -->
+
+<template name="footer">
+
+    <nav id="footer" class="bar bar-tab">
+
+        <a href="{{pathFor 'home'}}" class="tab-item {{isActive menu='home' active=getCurrentRoute}}">
+            <i class="fa fa-home"></i>
+            <span class="tab-label">Home</span>
+        </a>
+        <a href="{{pathFor 'restaurants'}}" class="tab-item {{isActive menu='restaurants' active=getCurrentRoute}}">
+            <i class="fa fa-cutlery"></i>
+            <span class="tab-label">Restaurants</span>
+        </a>
+        <a href="#" class="tab-item">
+            <i class="fa fa-street-view"></i>
+            <span class="tab-label">Nearby</span>
+        </a>
+        <a href="#" class="tab-item">
+            <i class="fa fa-ellipsis-h"></i>
+            <span class="tab-label">More</span>
+        </a>
+
+    </nav>
+
+</template>

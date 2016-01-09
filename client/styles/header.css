@@ -1,0 +1,35 @@
+/* HEADER */
+
+/* .bar {border: none !important;} */
+
+.bar-nav  {
+    width: 100%;
+    background: #ae226d !important;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+    padding-top: 20px;
+    height: 64px !important;
+}
+
+.bar-nav h1 {
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 44px;
+}
+
+.icon-left-nav::before {color: white;}
+.icon-right-nav::after {color: white;}
+
+.bar-nav .icon-left-nav::before{
+    position: relative;
+    bottom: 1px;
+}
+.bar .icon{
+    padding: 0;
+    line-height: 44px;
+    font-size: 20px;
+    padding: 0 15px;
+    position: relative;
+    right: 15px;
+}

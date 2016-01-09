@@ -1,0 +1,15 @@
+<template name="restaurants">
+    {{>header pageTitle="Restaurants Directory"}}
+    <div class="content">
+        <ul>
+            {{#each restaurants}}
+                <li class="coffeeshop">
+                    <a href="{{pathFor 'restaurant' _id=_id}}" class="navigate-right">
+                        {{>coverPhoto this}}
+                    </a>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+
+</template>

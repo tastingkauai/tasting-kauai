@@ -1,0 +1,36 @@
+body{
+    font-family: "Avenir Next", Arial, sans-serif;
+}
+
+h1 {
+    font-size: 1.9em;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 1.7em;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+strong {
+    font-weight: 500;
+}
+
+.red{
+    color: #990000;
+}

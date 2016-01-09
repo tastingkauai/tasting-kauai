@@ -1,0 +1,77 @@
+<template name="form">
+    <form hook="form">
+
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" placeholder="Name" value="{{name}}" /><br>
+
+        <label for="googlePlaceID">Place ID: </label>
+        <input type="text" id="googlePlaceID" name="googlePlaceID" placeholder="Google Place ID" value="{{googlePlaceID}}" /><br>
+
+        <label for="coverPhoto">Image URL: </label>
+        <input type="text" id="coverPhoto" name="coverPhoto" placeholder="Image URL" value="{{coverPhoto}}" /><br>
+
+        <fieldset id="images">
+            <legend>Images:</legend>
+            {{#if images}}
+                {{#each images}}
+                    <input type="text" name="images" value="{{this}}" />
+                {{/each}}
+            {{else}}
+                <input type="text" name="images" placeholder="img/dir/someimage.jpg" value="" />
+                <input type="text" name="images" placeholder="img/dir/someimage.jpg" value="" />
+                <input type="text" name="images" placeholder="img/dir/someimage.jpg" value="" />
+                <input type="text" name="images" placeholder="img/dir/someimage.jpg" value="" />
+            {{/if}}
+            <input id="add-image" type="text" name="images" placeholder="Add one more here..." value="" />
+        </fieldset><br>
+
+        <label for="lat">Latitude: </label>
+        <input type="text" id="lat" name="lat" placeholder="Latitude" value="{{lat}}" /><br>
+
+        <label for="lng">Longitude: </label>
+        <input type="text" id="lng" name="lng" placeholder="Longitude" value="{{lng}}" /><br>
+
+        <label for="address">Address: </label>
+        <input type="text" id="address" name="address" placeholder="Address" value="{{address}}" /><br>
+
+        <label for="city">City: </label>
+        <input type="text" id="city" name="city" placeholder="City" value="{{city}}" /><br>
+
+        <label for="zip">Zip Code: </label>
+        <input type="text" id="zip" name="zip" placeholder="Zip code" value="{{zip}}" /><br>
+
+        <label for="phone">Phone: </label>
+        <input type="text" id="phone" name="phone" placeholder="Phone" value="{{phone}}" /><br>
+
+        <fieldset id="coffeeshopHours">
+            <legend>Hours:</legend>
+            {{#if hours}}
+                {{#each hours}}
+                    <input type="text" name="hours" value="{{this}}" />
+                {{/each}}
+            {{else}}
+                <input type="text" name="hours" placeholder="Monday: 9:00 Am - 5:00 PM" />
+                <input type="text" name="hours" placeholder="Tuesday: 9:00 Am - 5:00 PM" />
+                <input type="text" name="hours" placeholder="Wednesday: 9:00 Am - 5:00 PM" />
+                <input type="text" name="hours" placeholder="Thursday: 9:00 Am - 5:00 PM" />
+                <input type="text" name="hours" placeholder="Friday: 9:00 Am - 5:00 PM" />
+                <input type="text" name="hours" placeholder="Saturday: 9:00 Am - 5:00 PM" />
+                <input type="text" name="hours" placeholder="Sunday: 9:00 Am - 5:00 PM" />
+            {{/if}}
+        </fieldset><br>
+
+        <label for="description">Description: </label>
+        <textarea type="text" id="description" name="description">{{description}}</textarea><br>
+
+        {{#if _id}}
+            <button class="button" type="submit">Update Coffee Shop</button>
+            <a href="#" hook="delete-coffeeshop" class="delete button" id="delete">Delete Coffee Shop</a>
+        {{else}}
+            <button class="button" type="submit">Add Coffee Shop</button>
+            <a href="{{pathFor 'admin'}}" class="delete button">Cancel</a>
+        {{/if}}
+
+    </form>
+</template>
+
+

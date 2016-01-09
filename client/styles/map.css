@@ -1,0 +1,11 @@
+.map-container{
+    height: calc(100vh - 114px);
+    background: #f6f6f6;
+}
+
+.map-overlay{
+    padding: 7px 5px 0;
+}
+.map-overlay .card{
+    margin-bottom: 5px;
+}

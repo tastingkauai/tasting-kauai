@@ -1,0 +1,17 @@
+<template name="restaurantUpdate">
+    {{> header pageTitle="Admin Area"}}
+    <div class="content">
+        {{> loginButtons}}
+        {{#if currentUser}}
+            <section class="admin-form">
+                <h1>Edit Restaurant</h1>
+                <a href="#" hook="load-data">Load data from google</a>
+                {{> form}}
+                <div class="map-container" style="height:0px">
+                    {{> googleMap name="restaurantMap" options=restaurantMapOptions}}
+                </div>
+
+            </section>
+        {{/if}}
+    </div>
+</template>
