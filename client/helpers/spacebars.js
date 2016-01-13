@@ -94,16 +94,115 @@ UI.registerHelper( 'priceRangeIcon', function(restaurant) {
 
 UI.registerHelper( 'slippahCodeIcon', function(restaurant) {
 
-    var icons = [];
+    var icon;
     if( restaurant.icons.slippahCode === 1 ){
-        icons.push( '/img/icons/slippa-1.png' );
+        icon = '/img/icons/slippa-1.png';
     }
     if( restaurant.icons.slippahCode === 2 ){
-        icons.push( '/img/icons/slippa-2.png' );
+        icon = '/img/icons/slippa-2.png';
     }
     if( restaurant.icons.slippahCode === 3 ){
-        icons.push( '/img/icons/slippa-3.png' );
+        icon = '/img/icons/slippa-3.png';
+    }
+    return icon;
+
+});
+
+UI.registerHelper( 'reservationsIcon', function(restaurant) {
+
+    var icon;
+    if( restaurant.icons.reservations === true ){
+        icon = '/img/icons/reservations.png';
+    }
+    return icon;
+
+});
+
+UI.registerHelper( 'alternativeDietsIcons', function(restaurant) {
+
+    var icons = [];
+    if( restaurant.icons.alternativeDiets.vegetarian ){
+        icons.push( '/img/icons/vegetarian.png' );
+    }
+    if( restaurant.icons.alternativeDiets.vegan ){
+        icons.push( '/img/icons/vegan.png' );
+    }
+    if( restaurant.icons.alternativeDiets.glutenFree ){
+        icons.push( '/img/icons/gluten-free.png' );
     }
     return icons;
 
+});
+
+UI.registerHelper( 'wifiIcon', function(restaurant) {
+
+    var icon;
+    if( restaurant.icons.wifi === true ){
+        icon = '/img/icons/wifi.png';
+    }
+    return icon;
+
+});
+
+
+UI.registerHelper( 'foodTruckIcon', function(restaurant) {
+
+    var icon;
+    if( restaurant.icons.foodTruck === true ){
+        icon = '/img/icons/food-trucks.png';
+    }
+    return icon;
+
+});
+
+UI.registerHelper( 'farmersMarketIcon', function(restaurant) {
+
+    var icon;
+    if( restaurant.icons.foodTruck === true ){
+        icon = '/img/icons/farmers-market.png';
+    }
+    return icon;
+
+});
+
+
+UI.registerHelper( 'haleAinaAwardsIcon', function(restaurant) {
+
+    var icon;
+    if( restaurant.icons.haleAinaAwards === true ){
+        icon = '/img/icons/hale-aina.png';
+    }
+    return icon;
+
+});
+
+
+UI.registerHelper( 'hawaiiRegionalCuisineIcon', function(restaurant) {
+
+    var icon;
+    if( restaurant.icons.hawaiiRegionalCuisine === true ){
+        icon = '/img/icons/hrc.png';
+    }
+    return icon;
+
+});
+
+
+UI.registerHelper( 'favoritesIcon', function(restaurant) {
+
+    var icon;
+    if( restaurant.icons.favorites === true ){
+        icon = '/img/icons/favorite.png';
+    }
+    return icon;
+
+});
+
+UI.registerHelper( 'activeFilterClass', function( args ){
+    var activeFilters = Session.get('activeFilters');
+    if( activeFilters && activeFilters[args.hash.filter] ){
+        return 'active';
+    }else{
+        return '';
+    }
 });

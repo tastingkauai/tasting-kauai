@@ -1,9 +1,53 @@
 .icons{
-    background-color: #c4eef1;
-    padding: 10px 0 7px;
-    text-align: center;
+    /*background-color: #c4eef1;*/
+    /*padding: 10px 0 7px;*/
+    /*text-align: center;*/
+    padding-top: 9px;
 }
 .icons img{
     height: 25px;
     width: 25px;
+    background: rgba(255,255,255,0.9);
+    padding: 5px;
+    border-radius: 50%;
+}
+.icons-large img {
+    height: 50px;
+    width: 50px;
+}
+.icons img.favorite{
+    background: rgba(255,255,255,0.9);
+    border: 3px solid rgba(255, 176, 0, 0.9);
+    padding: 2px;
+}
+.icons img.grey-icon{
+    background: #eee;
+}
+
+.search-options{
+    display: none;
+    padding: 0 !important;
+    /*padding: 0 20px 20px;*/
+}
+.search-options ul{
+    margin-bottom: 0;
+}
+
+.search-options ul li{
+    padding-right: 10px;
+}
+
+.search-options ul li span.label{
+    line-height: 30px;
+}
+.search-options ul li span.filters {
+    position: relative;
+    top: 2px;
+}
+
+.search-options ul li span.filters img {
+    background-color: #eee;
+}
+.search-options ul li span.filters img.active {
+    background-color: #00ACEE;
 }

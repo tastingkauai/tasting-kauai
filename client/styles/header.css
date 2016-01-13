@@ -33,3 +33,27 @@
     position: relative;
     right: 15px;
 }
+
+.bar .icon-search{
+    right: 0;
+    left: 15px;
+    color: #FFF;
+}
+
+.bar .icon-search label{
+    background: dodgerblue;
+    font-size: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    right: 12px;
+    height: 14px;
+    width: 14px;
+    line-height: 14px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.bar-header-secondary{
+    top: 64px !important;
+}

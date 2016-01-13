@@ -12,11 +12,15 @@
             <i class="fa fa-cutlery"></i>
             <span class="tab-label">Restaurants</span>
         </a>
-        <a href="#" class="tab-item">
+        <a href="{{pathFor 'nearby'}}" class="tab-item {{isActive menu='nearby' active=getCurrentRoute}}">
             <i class="fa fa-street-view"></i>
             <span class="tab-label">Nearby</span>
         </a>
-        <a href="#" class="tab-item">
+        <a href="{{pathFor 'foodTours'}}" class="tab-item {{isActive menu='foodTours' active=getCurrentRoute}}">
+            <i class="fa fa-camera-retro"></i>
+            <span class="tab-label">Food Tours</span>
+        </a>
+        <a href="{{pathFor 'more'}}" class="tab-item {{isActive menu='more' active=getCurrentRoute}}">
             <i class="fa fa-ellipsis-h"></i>
             <span class="tab-label">More</span>
         </a>

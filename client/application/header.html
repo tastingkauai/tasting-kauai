@@ -3,6 +3,10 @@
         {{#if back}}
             <a href="{{getPreviousPage}}" class="icon icon-left-nav pull-left" segue-transition="left"></a>
         {{/if}}
+        {{#if search}}
+            <a href="#" class="icon icon-search pull-right" hook="toggle-search-options">{{#with numberOfActiveFilters}}<label>{{this}}</label>{{/with}}</a>
+        {{/if}}
+
         <h1 class="title">{{pageTitle}}</h1>
     </header>
 </template>

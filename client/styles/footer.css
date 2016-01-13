@@ -22,15 +22,15 @@
 }
 
 span.tab-label, .bar-tab .tab-item .icon ~ .tab-label{
-    font-size: 14px;
+    font-size: 11px;
     color: white;
     padding: 3px;
 }
 
 .fa{
-    font-size: 14px;
+    font-size: 13px;
     color: #fff;
-    padding-top: 2px;
+    padding-top: 5px;
     text-align: center;
     display: block;
 }

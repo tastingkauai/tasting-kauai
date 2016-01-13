@@ -1,15 +1,73 @@
 <template name="restaurants">
-    {{>header pageTitle="Restaurants Directory"}}
+    {{>header pageTitle="Restaurants Directory" search=true}}
+
+
     <div class="content">
-        <ul>
-            {{#each restaurants}}
-                <li class="coffeeshop">
-                    <a href="{{pathFor 'restaurant' _id=_id}}" class="navigate-right">
-                        {{>coverPhoto this}}
-                    </a>
+
+        <div class="search-options icons" hook="search-options">
+            <ul class="table-view">
+                <li class="table-view-cell">
+                    <span class="label">Marta's Favorites</span>
+                    <span class="pull-right filters">
+                        <a href="#"  hook="toggle-filter" hook-filter="favorites"><img src="/img/icons/favorite.png" class="{{activeFilterClass filter='favorites'}}"></a>
+                    </span>
                 </li>
-            {{/each}}
-        </ul>
+                <li class="table-view-cell">
+                    <span class="label">Food Service</span>
+                    <span class="pull-right filters">
+                        <a href="#" hook="toggle-filter" hook-filter="breakfast"><img src="/img/icons/breakfast.png" class="{{activeFilterClass filter='breakfast'}}"></a>
+                        <a href="#" hook="toggle-filter" hook-filter="lunch"><img src="/img/icons/lunch.png" class="{{activeFilterClass filter='lunch'}}"></a>
+                        <a href="#" hook="toggle-filter" hook-filter="dinner"><img src="/img/icons/dinner.png" class="{{activeFilterClass filter='dinner'}}"></a>
+                    </span>
+                </li>
+                <li class="table-view-cell">
+                    <span class="label">Price Range</span>
+                    <span class="pull-right filters">
+                        <a href="#" hook="toggle-filter" hook-filter="dollar1"><img src="/img/icons/dollar-1.png" class="{{activeFilterClass filter='dollar1'}}"></a>
+                        <a href="#" hook="toggle-filter" hook-filter="dollar2"><img src="/img/icons/dollar-2.png" class="{{activeFilterClass filter='dollar2'}}"></a>
+                        <a href="#" hook="toggle-filter" hook-filter="dollar3"><img src="/img/icons/dollar-3.png" class="{{activeFilterClass filter='dollar3'}}"></a>
+                    </span>
+                </li>
+                <li class="table-view-cell">
+                    <span class="label">Slippah Code</span>
+                    <span class="pull-right filters">
+                        <a href="#" hook="toggle-filter" hook-filter="slippah1"><img src="/img/icons/slippa-1.png" class="{{activeFilterClass filter='slippah1'}}"></a>
+                        <a href="#" hook="toggle-filter" hook-filter="slippah2"><img src="/img/icons/slippa-2.png" class="{{activeFilterClass filter='slippah2'}}"></a>
+                        <a href="#" hook="toggle-filter" hook-filter="slippah3"><img src="/img/icons/slippa-3.png" class="{{activeFilterClass filter='slippah3'}}"></a>
+                    </span>
+                </li>
+                <li class="table-view-cell">
+                    <span class="label">Alternative Diets</span>
+                    <span class="pull-right filters">
+                        <a href="#"  hook="toggle-filter" hook-filter="vegetarian"><img src="/img/icons/vegetarian.png" class="{{activeFilterClass filter='vegetarian'}}"></a>
+                        <a href="#"  hook="toggle-filter" hook-filter="vegan"><img src="/img/icons/vegan.png" class="{{activeFilterClass filter='vegan'}}"></a>
+                        <a href="#"  hook="toggle-filter" hook-filter="glutenFree"><img src="/img/icons/gluten-free.png" class="{{activeFilterClass filter='glutenFree'}}"></a>
+                    </span>
+                </li>
+                <li class="table-view-cell">
+                    <span class="label">Other</span>
+                    <span class="pull-right filters">
+                        <a href="#"  hook="toggle-filter" hook-filter="wifi"><img src="/img/icons/wifi.png" class="{{activeFilterClass filter='wifi'}}"></a>
+                        <a href="#"  hook="toggle-filter" hook-filter="foodTruck"><img src="/img/icons/food-trucks.png" class="{{activeFilterClass filter='foodTruck'}}"></a>
+                        <a href="#"  hook="toggle-filter" hook-filter="farmersMarket"><img src="/img/icons/farmers-market.png" class="{{activeFilterClass filter='farmersMarket'}}"></a>
+                        <a href="#"  hook="toggle-filter" hook-filter="hawaiiRegionalCuisine"><img src="/img/icons/hrc.png" class="{{activeFilterClass filter='hawaiiRegionalCuisine'}}"></a>
+                        <a href="#"  hook="toggle-filter" hook-filter="haleAinaAwards"><img src="/img/icons/hale-aina.png" class="{{activeFilterClass filter='haleAinaAwards'}}"></a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        {{#if restaurantsToDisplay}}
+            <ul>
+                {{#each restaurantsToDisplay}}
+                    <li class="coffeeshop">
+                        <a href="{{pathFor 'restaurant' _id=_id}}" class="navigate-right">
+                            {{>coverPhoto this}}
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
     </div>
 
 </template>
