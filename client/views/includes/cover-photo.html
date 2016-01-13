@@ -1,13 +1,14 @@
 <template name="coverPhoto">
-
-    <div class="cover-photo" style="background-image: url({{coverPhoto}});">
+    <div class="cover-photo" style="background-image: url({{restaurant.coverPhoto}});">
         <div class="cover">
             <h1 class="coffeeco">
-                {{name}}<br>
-                <span class="region">{{byline}}</span><br>
-                <span class="region">{{getRegionFromZip zip}}</span> <small style="font-size:8px;position:relative;bottom:1px;">&bull;</small>
-                <span class="city">{{city}}</span><br>
-                {{>icons this}}
+                {{restaurant.name}}<br>
+                <span class="region">{{restaurant.byline}}</span><br>
+                <span class="region">{{getRegionFromZip restaurant.zip}}</span> <small style="font-size:8px;position:relative;bottom:1px;">&bull;</small>
+                <span class="city">{{restaurant.city}}</span><br>
+                {{#if showIcons}}
+                    {{>icons restaurant}}
+                {{/if}}
             </h1>
         </div>
     </div>

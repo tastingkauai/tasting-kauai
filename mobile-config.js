@@ -29,9 +29,9 @@ App.setPreference('StatusBarOverlaysWebView', 'true');
 App.setPreference('StatusBarStyle', 'lightcontent');
 App.setPreference('StatusBarBackgroundColor', '#ae226d');
 
-//App.accessRule('http://*');
-//App.accessRule('https://*');
+App.accessRule('http://*');
+App.accessRule('https://*');
 
-//App.configurePlugin('plugin.google.maps', {
-//    'API_KEY_FOR_IOS': 'AIzaSyDuz95a5e7907yAlgPt3WkGgbhDP6V-RA4'
-//});
+App.configurePlugin('plugin.google.maps', {
+    'API_KEY_FOR_IOS': 'AIzaSyBjPmwXl33-n3akqAy5nPvoCeTEY5A1Mm8'
+});

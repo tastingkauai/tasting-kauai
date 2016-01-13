@@ -83,6 +83,12 @@ ul {
     padding: 0;
 }
 
+ul.bullets{
+    list-style: disc;
+    margin-left: 20px;
+}
+
+
 .card{
     margin: 0 0 20px 0
 }

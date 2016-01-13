@@ -62,7 +62,7 @@
                 {{#each restaurantsToDisplay}}
                     <li class="coffeeshop">
                         <a href="{{pathFor 'restaurant' _id=_id}}" class="navigate-right">
-                            {{>coverPhoto this}}
+                            {{>coverPhoto restaurant=this showIcons=false}}
                         </a>
                     </li>
                 {{/each}}

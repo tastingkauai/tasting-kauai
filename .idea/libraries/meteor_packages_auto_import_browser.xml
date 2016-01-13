@@ -86,8 +86,10 @@
         <item url="file://$USER_HOME$/.meteor/packages/html-tools/1.0.5/web.browser/scanner.js" />
         <item url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons.js" />
         <item url="file://$USER_HOME$/.meteor/packages/html-tools/1.0.5/web.browser/templatetag.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/zendy_cartographer/1.0.13/web.browser/cartographer-api.js" />
         <item url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/accounts_ui.js" />
         <item url="file://$USER_HOME$/.meteor/packages/html-tools/1.0.5/web.browser/tokenize.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/zendy_cartographer/1.0.13/web.browser/cartographer-map.js" />
         <item url="file://$USER_HOME$/.meteor/packages/html-tools/1.0.5/web.browser/utils.js" />
         <item url="file://$USER_HOME$/.meteor/packages/html-tools/1.0.5/web.browser/charref.js" />
         <item url="file://$USER_HOME$/.meteor/packages/html-tools/1.0.5/web.browser/parse.js" />
@@ -118,6 +120,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/tracker/1.0.9/web.browser/deprecated.js" />
         <item url="file://$USER_HOME$/.meteor/packages/tracker/1.0.9/web.browser/tracker.js" />
         <item url="file://$USER_HOME$/.meteor/packages/fortawesome_fontawesome/4.5.0/web.browser/upstream/css/font-awesome.css" />
+        <item url="file://$USER_HOME$/.meteor/packages/mdg_geolocation/1.1.0/web.browser/geolocation.js" />
         <item url="file://$USER_HOME$/.meteor/packages/percolate_momentum/0.7.2/web.browser/packages/percolate:momentum.js" />
         <item url="file://$USER_HOME$/.meteor/packages/percolate_momentum-iron-router/0.7.0/web.browser/packages/percolate:momentum-iron-router.js" />
         <item url="file://$USER_HOME$/.meteor/packages/percolate_velocityjs/1.1.0/web.browser/packages/percolate:velocityjs.js" />
@@ -250,8 +253,10 @@
       <root url="file://$USER_HOME$/.meteor/packages/html-tools/1.0.5/web.browser/scanner.js" />
       <root url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons.js" />
       <root url="file://$USER_HOME$/.meteor/packages/html-tools/1.0.5/web.browser/templatetag.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/zendy_cartographer/1.0.13/web.browser/cartographer-api.js" />
       <root url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/accounts_ui.js" />
       <root url="file://$USER_HOME$/.meteor/packages/html-tools/1.0.5/web.browser/tokenize.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/zendy_cartographer/1.0.13/web.browser/cartographer-map.js" />
       <root url="file://$USER_HOME$/.meteor/packages/html-tools/1.0.5/web.browser/utils.js" />
       <root url="file://$USER_HOME$/.meteor/packages/html-tools/1.0.5/web.browser/charref.js" />
       <root url="file://$USER_HOME$/.meteor/packages/html-tools/1.0.5/web.browser/parse.js" />
@@ -282,6 +287,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/tracker/1.0.9/web.browser/deprecated.js" />
       <root url="file://$USER_HOME$/.meteor/packages/tracker/1.0.9/web.browser/tracker.js" />
       <root url="file://$USER_HOME$/.meteor/packages/fortawesome_fontawesome/4.5.0/web.browser/upstream/css/font-awesome.css" />
+      <root url="file://$USER_HOME$/.meteor/packages/mdg_geolocation/1.1.0/web.browser/geolocation.js" />
       <root url="file://$USER_HOME$/.meteor/packages/percolate_momentum/0.7.2/web.browser/packages/percolate:momentum.js" />
       <root url="file://$USER_HOME$/.meteor/packages/percolate_momentum-iron-router/0.7.0/web.browser/packages/percolate:momentum-iron-router.js" />
       <root url="file://$USER_HOME$/.meteor/packages/percolate_velocityjs/1.1.0/web.browser/packages/percolate:velocityjs.js" />

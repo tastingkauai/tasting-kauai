@@ -29,11 +29,63 @@ Router.route( '/legend', {
     name:'legend'
 });
 
+// HOW TO
+Router.route( '/food-bank', {
+    name:'foodBank'
+});
+
+
+// HOW TO
+Router.route( '/language', {
+    name:'language'
+});
+
+
+
+
+var appDownloadRedirect = function(){
+    if( !Meteor.isCordova ){
+        Router.go('download');
+    }
+    this.next();
+}
+
+Router.onBeforeAction(appDownloadRedirect, {
+    except: ['download','admin', 'restaurantUpdate', 'coffeeshopCreate']
+});
 
 // HOW TO
 Router.route( '/food-tours', {
     name:'foodTours'
 });
+
+// HOW TO
+Router.route( '/food-tours/north-shore', {
+    name:'foodToursNorthShore'
+});
+
+
+// HOW TO
+Router.route( '/food-tours/south-shore', {
+    name:'foodToursSouthShore'
+});
+
+
+// HOW TO
+Router.route( '/food-tours/farmers-market', {
+    name:'foodToursFarmersMarket'
+});
+
+// HOW TO
+Router.route( '/food-tours/east-side', {
+    name:'foodToursEastSide'
+});
+
+// HOW TO
+Router.route( '/food-tours/short-order', {
+    name:'foodToursShortOrder'
+});
+
 
 
 // HOW TO
@@ -44,6 +96,16 @@ Router.route( '/choose', {
 // HOW TO
 Router.route( '/more', {
     name:'more'
+});
+
+// HOW TO
+Router.route( '/acknowledgements', {
+    name:'acknowledgements'
+});
+
+// HOW TO
+Router.route( '/glossary', {
+    name:'glossary'
 });
 
 // DOWNLOAD

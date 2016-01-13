@@ -1,7 +1,36 @@
 <template name="nearby">
     {{>header pageTitle="Nearby"}}
-
     <div class="content">
-    <h1>Nearby</h1>
+        {{#if center}}
+            {{#cartographerMap center=center mapOptions=mapOptions markers=markers}}
+                {{#if currentSelection}}
+                    {{#with currentSelection}}
+                        <div class="map-overlay">
+                            <div class="card">
+                                <ul class="table-view">
+                                    <li class="table-view-cell"><b>{{name}}</b></li>
+                                    <li class="table-view-cell"><a href="{{pathFor 'restaurant' _id=_id}}" class="navigate-right">Business info &amp; hours</a></li>
+                                    <li class="table-view-cell"><a href="#" hook="directions" hook-data-destination="{{streetAddress}}, {{city}}" class="navigate-right-external">Directions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    {{/with}}
+                {{else}}
+                    {{#unless isOnKauai center}}
+                        <div class="map-overlay">
+                            <div class="card">
+                                <ul class="table-view">
+                                    <li class="table-view-cell"><b>You're not on Kauai!</b></li>
+                                    <li class="table-view-cell"><a href="#" hook="center-on-kauai" class="navigate-right-external">Center Map On Kauai</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    {{/unless}}
+                {{/if}}
+            {{/cartographerMap}}
+
+        {{else}}
+            Loading map...
+        {{/if}}
     </div>
 </template>

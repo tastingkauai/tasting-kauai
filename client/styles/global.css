@@ -44,3 +44,12 @@ strong {
 .red{
     color: #990000;
 }
+
+.no-arrow:after{
+    display:none !important
+}
+
+a.button{
+    color: #ffffff;
+    font-weight: bold !important;
+}

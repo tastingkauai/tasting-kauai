@@ -8,3 +8,14 @@ Template.layout.helpers({
         return Meteor.isCordova;
     }
 });
+
+Template.layout.events({
+    'click [hook="directions"]': function(evt){
+        evt.preventDefault();
+        var destination = $(evt.target).attr('hook-data-destination');
+        plugin.google.maps.external.launchNavigation({
+            from: 'Current Location',
+            to: destination
+        });
+    }
+});
