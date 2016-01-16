@@ -2,6 +2,9 @@
 Template.layout.events(Segue.events);
 Template.layout.helpers(Segue.helpers);
 
+// Dispatcher events to open links in external native apps
+Template.layout.events(Dispatcher.events);
+
 // Helper to check if user is on browser or mobile
 Template.layout.helpers({
     isCordova: function(){
@@ -17,5 +20,37 @@ Template.layout.events({
             from: 'Current Location',
             to: destination
         });
+    },
+    'click [hook="dispatch"]': function(evt){
+        evt.preventDefault();
+        var destination = $(evt.currentTarget).attr('href');
+        window.open(destination,'_system');
+    }
+});
+
+// Template created
+Template.layout.created = function(){
+    // track whether the user is currently dragging the screen
+    this.isDragging = false;
+}
+
+// Template events
+Template.layout.events({
+
+    // tragging screen scroll with touchmove
+    'touchmove': function(evt,tmpl) {
+        if( TastingKauai.isAndroid() ) {
+            tmpl.isDragging = true;
+        }
+    },
+
+    // Convert touchend into click
+    'touchend': function(evt,tmpl){
+        if( TastingKauai.isAndroid() ) {
+            if (!tmpl.isDragging) {
+                $(evt.currentTarget).click();
+            }
+            tmpl.isDragging = false;
+        }
     }
 });

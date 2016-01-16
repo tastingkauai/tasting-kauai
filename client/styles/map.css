@@ -2,6 +2,9 @@
     height: calc(100vh - 114px);
     background: #f6f6f6;
 }
+body.android .map-container{
+    height: calc(100vh - 94px) !important;
+}
 
 .map-overlay{
     padding: 7px 5px 0;

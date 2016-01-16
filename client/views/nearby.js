@@ -1,5 +1,6 @@
 Template.nearby.events({
-    'click [hook="center-on-kauai"]': function(){
+    'click [hook="center-on-kauai"]': function(evt){
+        evt.preventDefault();
         Cartographer.centerMap( 21.971167, -159.356483 );
         var newCenter = new plugin.google.maps.LatLng( 21.971167, -159.356483 );
         Session.set('center', newCenter );

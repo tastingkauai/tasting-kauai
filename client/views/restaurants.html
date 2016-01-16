@@ -57,7 +57,7 @@
             </ul>
         </div>
 
-        {{#if restaurantsToDisplay}}
+        {{#if foundRestaurants}}
             <ul>
                 {{#each restaurantsToDisplay}}
                     <li class="coffeeshop">
@@ -67,6 +67,11 @@
                     </li>
                 {{/each}}
             </ul>
+        {{else}}
+            <div class="details">
+                <h4>Nothing Found</h4>
+                <p><a href="#" hook="reset-filters" class="button">Reset Filters</a></p>
+            </div>
         {{/if}}
     </div>
 

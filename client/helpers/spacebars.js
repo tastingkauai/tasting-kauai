@@ -206,3 +206,18 @@ UI.registerHelper( 'activeFilterClass', function( args ){
         return '';
     }
 });
+
+
+/**
+ * Checks if user agent is iOS
+ */
+Template.registerHelper('isIOS',function(){
+    return TastingKauai.isIOS();
+});
+
+/**
+ * Checks if user agent is Android
+ */
+Template.registerHelper('isAndroid',function(){
+    return TastingKauai.isAndroid();
+});

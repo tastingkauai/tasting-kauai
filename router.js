@@ -1,12 +1,22 @@
 // ROUTER OPTIONS
 Router.configure({
     layoutTemplate: 'layout',
-    loadingTemplate: 'loading'
+    loadingTemplate: 'loading',
+    waitOn: function(){
+        return [
+            Meteor.subscribe('restaurants')
+        ]
+    }
 });
 
 // HOME
 Router.route( '/', {
-    name:'home'
+    name:'home',
+    data: function(){
+        return {
+            currentLocation: Geolocation.latLng()
+        }
+    }
 });
 
 // HOW TO
@@ -43,16 +53,6 @@ Router.route( '/language', {
 
 
 
-var appDownloadRedirect = function(){
-    if( !Meteor.isCordova ){
-        Router.go('download');
-    }
-    this.next();
-}
-
-Router.onBeforeAction(appDownloadRedirect, {
-    except: ['download','admin', 'restaurantUpdate', 'coffeeshopCreate']
-});
 
 // HOW TO
 Router.route( '/food-tours', {
@@ -158,4 +158,18 @@ Router.route( '/restaurant/update/:_id', {
     data: function(){
         return TastingKauai.Collections.Restaurants.findOne(this.params._id);
     }
+});
+
+
+
+
+var appDownloadRedirect = function(){
+    if( !Meteor.isCordova ){
+        Router.go('download');
+    }
+    this.next();
+}
+
+Router.onBeforeAction(appDownloadRedirect, {
+    except: ['download','admin', 'restaurantUpdate', 'coffeeshopCreate']
 });

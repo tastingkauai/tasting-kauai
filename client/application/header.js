@@ -15,7 +15,8 @@ Template.header.helpers({
 });
 
 Template.header.events({
-    'click [hook="toggle-search-options"]': function(){
+    'click [hook="toggle-search-options"]': function(evt){
+        evt.preventDefault();
         var searchOptionsVisible = $('[hook="search-options"]').is(':visible');
         var searchOptions = $('[hook="search-options"]');
         if( searchOptionsVisible ){
