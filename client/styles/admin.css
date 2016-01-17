@@ -150,3 +150,21 @@ textarea {
     display: block;
     margin: 0 auto;
 }
+
+label input,
+label img{
+    float: left;
+    line-height: 35px;
+    box-shadow: none;
+}
+label input{
+    max-width: 20px;
+    position: relative;
+    top: 6px;
+}
+fieldset#filters label{
+    width: 33% !important;
+    height: 35px !important;
+    float: left;
+    line-height: 35px;
+}

@@ -11,62 +11,55 @@ Template.restaurantUpdate.events({
         }
     },
 
-    // form submission handler
-    //'submit [hook="form"]': function(event, template){
-    //
-    //    // Prevent default browser form submit
-    //    event.preventDefault();
-    //
-    //    var id = this._id;
-    //    // Get value from form element
-    //
-    //    var formObject = $(event.target);
-    //    var formData = Bureaucrat.getFormData( formObject );
-    //
-    //    var coffeeShopAttributes = CoffeeApp.getCoffeeShopAttributes( formData );
-    //
-    //
-    //    // Update a cafe
-    //    Meteor.call(
-    //        "updateCoffeeshop",
-    //        id,
-    //        coffeeShopAttributes,
-    //        function(error, result) {
-    //            if( error ){
-    //                alert( 'Error' );
-    //            }else{
-    //                document.getElementById("add-image").value = "";
-    //                alert( 'Coffee Shop has been saved.' );
-    //            }
-    //        }
-    //    );
-    //
-    //},
-    //
-    //// Delete coffee shop event handler
-    //'click [hook="delete-coffeeshop"]': function (event, template) {
-    //
-    //    // Prevent Default Click Event
-    //    event.preventDefault();
-    //
-    //    //Ask user if they want to delete Coffeeshop
-    //    if (confirm('Permanently delete Coffeeshop?')) {
-    //
-    //        //Delete Coffeeshop from db and redirect to home
-    //        Meteor.call(
-    //            'removeCoffeeshop',
-    //            this._id,
-    //            function( error, result){
-    //                if( error ){
-    //                    alert( error.reason );
-    //                }else{
-    //                    Router.go('admin');
-    //                }
-    //            }
-    //        );
-    //
-    //    }
-    //}
+    'submit [hook="form"]': function(evt, tmpl){
+
+        // Prevent default browser form submit
+        evt.preventDefault();
+
+        var id = this._id;
+        // Get value from form element
+
+        var formObject = $(event.target);
+        var formData = Bureaucrat.getFormData( formObject );
+
+        if( formData.images ) {
+            formData.images = formData.images.filter(Boolean);
+        }else{
+            formData.images = [];
+        }
+
+        var updateResult = TastingKauai.Collections.Restaurants.update(
+            {
+                _id: tmpl.data._id,
+            },
+            {
+                $set: formData
+            }
+
+        );
+
+        alert( updateResult );
+
+    },
+
+    // Delete coffee shop event handler
+    'click [hook="delete-restaurant"]': function (evt, tmpl) {
+
+        // Prevent Default Click Event
+        evt.preventDefault();
+
+        //Ask user if they want to delete Coffeeshop
+        if (confirm('Permanently delete Coffeeshop?')) {
+
+            var delResult = TastingKauai.Collections.Restaurants.remove({_id:this._id});
+            if( delResult ){
+                Router.go('admin');
+            }else{
+                alert('delete fail');
+            }
+
+        }
+    }
 
 });
 

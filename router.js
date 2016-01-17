@@ -160,6 +160,11 @@ Router.route( '/restaurant/update/:_id', {
     }
 });
 
+// RESTAURANT CREATE
+Router.route( '/restaurants/create/', {
+    name: 'restaurantCreate'
+});
+
 
 
 
@@ -171,5 +176,5 @@ var appDownloadRedirect = function(){
 }
 
 Router.onBeforeAction(appDownloadRedirect, {
-    except: ['download','admin', 'restaurantUpdate', 'coffeeshopCreate']
+    except: ['download','admin', 'restaurantUpdate', 'restaurantCreate']
 });

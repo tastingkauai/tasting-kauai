@@ -4,11 +4,11 @@
         {{> loginButtons}}
         {{#if currentUser}}
             <ul class="table-view coffeeshops">
+                <!--<li class="table-view-cell">-->
+                    <!--<a href="#" hook="reset-database" class="navigate-right" style="padding-top: 25px; padding-bottom:25px; text-transform: uppercase">Reset Database</a>-->
+                <!--</li>-->
                 <li class="table-view-cell">
-                    <a href="#" hook="reset-database" class="navigate-right" style="padding-top: 25px; padding-bottom:25px; text-transform: uppercase">Reset Database</a>
-                </li>
-                <li class="table-view-cell">
-                    <a href="#" class="navigate-right" style="padding-top: 25px; padding-bottom:25px; text-transform: uppercase">Add A New Restaurant</a>
+                    <a href="{{pathFor 'restaurantCreate'}}" class="navigate-right" style="padding-top: 25px; padding-bottom:25px; text-transform: uppercase">Add A New Restaurant</a>
                 </li>
                 {{#each restaurants}}
                     <li class="table-view-cell">
