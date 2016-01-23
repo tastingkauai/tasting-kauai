@@ -4,7 +4,32 @@
  * @return string : an html string
  */
 UI.registerHelper('textareaToHTML', function( content ) {
-    return Spacebars.SafeString( content.replace(/\n/g, '<br/>') );
+    return Spacebars.SafeString( content.replace(/\n/g, '<br><br>') );
+});
+
+UI.registerHelper('getRandomColor', function(){
+    var seed = Math.floor((Math.random() * 10) + 1);
+    if( seed == 1 ){
+        return '#D4B6DE';
+    }else if( seed == 2 ){
+        return '#A986B5';
+    }else if( seed == 3 ){
+        return '#F2D8EC';
+    }else if( seed == 4 ){
+        return '#A18499';
+    }else if( seed == 5 ){
+        return '#F2BBD6';
+    }else if( seed == 6 ){
+        return '#B3829A';
+    }else if( seed == 7 ){
+        return '#F5D9D3';
+    }else if( seed == 8 ){
+        return '#B09A96';
+    }else if( seed == 9 ){
+        return '#EDFFFD';
+    }else{
+        return '#FFEDEF';
+    }
 });
 
 UI.registerHelper('isOnKauai', function(center){

@@ -1,6 +1,16 @@
+Template.restaurants.rendered = function(){
+
+
+        $('[hook="restaurants-list"]').find('[hook="load-image"]').each(function () {
+            TastingKauai.loadCoverImage( $(this), $(this).attr('hook-load-image-data') );
+        });
+
+}
+
 Template.restaurants.events({
     'click [hook="toggle-filter"]': function(evt,tmpl){
         evt.preventDefault();
+
         var filter = $(evt.currentTarget).attr('hook-filter');
         var activeFilters = Session.get('activeFilters');
         if( !activeFilters ){
@@ -12,10 +22,17 @@ Template.restaurants.events({
             activeFilters[filter] = true;
         }
         Session.set('activeFilters',activeFilters);
+        $('[hook="restaurants-list"]').find('[hook="load-image"]').each(function () {
+            TastingKauai.loadCoverImage( $(this), $(this).attr('hook-load-image-data') );
+        });
+
     },
     'click [hook="reset-filters"]': function(evt,tmpl){
         evt.preventDefault();
         Session.set('activeFilters',false);
+        $('[hook="restaurants-list"]').find('[hook="load-image"]').each(function () {
+            TastingKauai.loadCoverImage( $(this), $(this).attr('hook-load-image-data') );
+        });
     }
 });
 
@@ -29,39 +46,39 @@ Template.restaurants.helpers({
         if( activeFilters ){
             if( activeFilters.favorites ){
                 args.push( {
-                    'icons.favorites': true
+                    'favorites': true
                 } );
             }
             if( activeFilters.breakfast ){
                 args.push({
-                    'icons.foodService.breakfast': true
+                    'breakfast': true
                 });
             }
             if( activeFilters.lunch ){
                 args.push( {
-                    'icons.foodService.lunch': true
+                    'lunch': true
                 });
             }
             if( activeFilters.dinner ){
                 args.push( {
-                    'icons.foodService.dinner': true
+                    'dinner': true
                 });
             }
 
             var priceArgs = []
             if( activeFilters.dollar1 ){
                 priceArgs.push( {
-                    'icons.priceRange': 1
+                    'priceRange': 1
                 });
             }
             if( activeFilters.dollar2 ){
                 priceArgs.push( {
-                    'icons.priceRange': 2
+                    'priceRange': 2
                 });
             }
             if( activeFilters.dollar3 ){
                 priceArgs.push( {
-                    'icons.priceRange': 3
+                    'priceRange': 3
                 });
             }
             if( priceArgs.length > 0 ){
@@ -71,16 +88,16 @@ Template.restaurants.helpers({
             var slippahArgs = []
             if( activeFilters.slippah1 ){
                 slippahArgs.push( {
-                    'icons.slippahCode': 1
+                    'slippahCode': 1
                 });
             }
             if( activeFilters.slippah2 ){
                 slippahArgs.push( {
-                    'icons.slippahCode': 2
+                    'slippahCode': 2
                 });
             }if( activeFilters.slippah3 ){
                 slippahArgs.push( {
-                    'icons.slippahCode': 3
+                    'slippahCode': 3
                 });
             }
             if( slippahArgs.length > 0 ){
@@ -89,44 +106,44 @@ Template.restaurants.helpers({
 
             if( activeFilters.vegetarian ){
                 args.push( {
-                    'icons.alternativeDiets.vegetarian': true
+                    'vegetarian': true
                 } );
             }
             if( activeFilters.vegan ){
                 args.push( {
-                    'icons.alternativeDiets.vegan': true
+                    'vegan': true
                 } );
             }
             if( activeFilters.glutenFree ){
                 args.push( {
-                    'icons.alternativeDiets.glutenFree': true
+                    'glutenFree': true
                 } );
             }
 
             // OTHER FILTERS
             if( activeFilters.wifi ){
                 args.push( {
-                    'icons.wifi': true
+                    'wifi': true
                 } );
             }
             if( activeFilters.foodTruck ){
                 args.push( {
-                    'icons.foodTruck': true
+                    'foodTruck': true
                 } );
             }
             if( activeFilters.farmersMarket ){
                 args.push( {
-                    'icons.farmersMarket': true
+                    'farmersMarket': true
                 } );
             }
             if( activeFilters.haleAinaAwards ){
                 args.push( {
-                    'icons.haleAinaAwards': true
+                    'haleAinaAwards': true
                 } );
             }
             if( activeFilters.hawaiiRegionalCuisine ){
                 args.push( {
-                    'icons.hawaiiRegionalCuisine': true
+                    'hawaiiRegionalCuisine': true
                 } );
             }
 

@@ -1,5 +1,5 @@
 <template name="coverPhoto">
-    <div class="cover-photo" style="background-image: url({{restaurant.coverPhoto}});">
+    <div class="cover-photo" hook="load-image" hook-load-image-data="{{restaurant.coverPhoto}}" style="background-color: {{getRandomColor}}">
         <div class="cover">
             <h1 class="coffeeco">
                 {{restaurant.name}}<br>

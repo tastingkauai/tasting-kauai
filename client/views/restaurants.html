@@ -58,7 +58,7 @@
         </div>
 
         {{#if foundRestaurants}}
-            <ul>
+            <ul hook="restaurants-list">
                 {{#each restaurantsToDisplay}}
                     <li class="coffeeshop">
                         <a href="{{pathFor 'restaurant' _id=_id}}" class="navigate-right">

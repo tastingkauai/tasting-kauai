@@ -20,9 +20,13 @@ Template.header.events({
         var searchOptionsVisible = $('[hook="search-options"]').is(':visible');
         var searchOptions = $('[hook="search-options"]');
         if( searchOptionsVisible ){
-            searchOptions.hide('slow');
+            searchOptions.hide('50');
         }else{
-            searchOptions.show('slow');
+            $(".content").animate({ scrollTop: 0 }, 20, function(){
+                searchOptions.show('300');
+            });
+
+
         }
     }
 });

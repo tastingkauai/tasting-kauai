@@ -37,6 +37,7 @@ Template.layout.created = function(){
 // Template events
 Template.layout.events({
 
+
     // tragging screen scroll with touchmove
     'touchmove': function(evt,tmpl) {
         if( TastingKauai.isAndroid() ) {
