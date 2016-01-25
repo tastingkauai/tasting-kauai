@@ -1,7 +1,11 @@
 <!-- FOOTER -->
 
 <template name="footer">
-
+    {{#if placeholder}}
+        <div class="placeholder flexbox-container">
+            <div>LOADING</div>
+        </div>
+    {{/if}}
     <nav id="footer" class="bar bar-tab">
 
         <a href="{{pathFor 'home'}}" class="tab-item {{isActive menu='home' active=getCurrentRoute}}">

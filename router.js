@@ -3,9 +3,7 @@ Router.configure({
     layoutTemplate: 'layout',
     loadingTemplate: 'loading',
     waitOn: function(){
-        return [
-            Meteor.subscribe('restaurants')
-        ]
+        return [ Meteor.subscribe('restaurants') ];
     }
 });
 
@@ -116,7 +114,11 @@ Router.route( '/download', {
 
 // NEARBY
 Router.route( '/nearby', {
-    name:'nearby'
+    name:'nearby',
+    //layoutTemplate: 'layoutNoLoading'
+    data: function(){
+        return { hideLoadingScreen: true };
+    }
 });
 
 // NEARBY
@@ -129,7 +131,7 @@ Router.route( '/admin', {
     name:'admin',
     data: function(){
         return {
-            restaurants: TastingKauai.Collections.Restaurants.find()
+            restaurants: TastingKauai.Collections.Restaurants.find({},{sort:{name:1}})
         }
     }
 });
@@ -174,7 +176,7 @@ var appDownloadRedirect = function(){
     }
     this.next();
 }
-
-Router.onBeforeAction(appDownloadRedirect, {
-    except: ['download','admin', 'restaurantUpdate', 'restaurantCreate']
-});
+//
+//Router.onBeforeAction(appDownloadRedirect, {
+//    except: ['download','admin', 'restaurantUpdate', 'restaurantCreate']
+//});

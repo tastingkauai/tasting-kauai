@@ -6,25 +6,6 @@ Template.nearby.events({
         Session.set('center', newCenter );
     }
 });
-Template.nearby.helpers({
-    markers: function(){
-        var restaurants = TastingKauai.Collections.Restaurants.find().fetch();
-        var curSel = Session.get('currentSelection');
-        var markers = [];
-        _.each( restaurants, function( restaurant ) {
-            var iconColor = ( curSel && curSel._id == restaurant._id ) ? 'DarkRed' : 'Gray';
-            if( restaurant.lat && restaurant.lng ) {
-                markers.push({
-                    _id: restaurant._id,
-                    latitude: restaurant.lat,
-                    longitude: restaurant.lng,
-                    icon: iconColor
-                });
-            }
-        });
-        return markers;
-    }
-});
 
 Template.nearby.rendered = function(){
 
@@ -46,6 +27,23 @@ Template.nearby.rendered = function(){
 }
 
 Template.nearby.helpers({
+    markers: function(){
+        var restaurants = TastingKauai.Collections.Restaurants.find().fetch();
+        var curSel = Session.get('currentSelection');
+        var markers = [];
+        _.each( restaurants, function( restaurant ) {
+            var iconColor = ( curSel && curSel._id == restaurant._id ) ? 'DarkRed' : 'Gray';
+            if( restaurant.lat && restaurant.lng ) {
+                markers.push({
+                    _id: restaurant._id,
+                    latitude: restaurant.lat,
+                    longitude: restaurant.lng,
+                    icon: iconColor
+                });
+            }
+        });
+        return markers;
+    },
     center: function(){
         if (Session.get('currentSelection')) {
             var currentSelection = Session.get('currentSelection');

@@ -1,10 +1,10 @@
-<template name="layout">
+<template name="layoutNoLoading">
 
     <!-- LOAD APP ON CORDOVA -->
     {{#if isCordova}}
         {{#momentum plugin='iron-router' options=transition}}
             {{>yield}}
-            {{> footer placeholder=true}}
+            {{> footer}}
         {{/momentum}}
 
         <!-- LOAD LANDING PAGE / ADMIN ON BROWSER -->

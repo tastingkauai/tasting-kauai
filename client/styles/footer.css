@@ -39,3 +39,29 @@ body.android #footer.bar-tab{
     top: auto !important;
     bottom: 0 !important;
 }
+.placeholder{
+    background: #eee;
+    height: calc(100vh - 51px);
+    width: 100%;
+}
+.placeholder div{
+    color: #CCC;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.flexbox-container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+
+    align-items: center;
+}

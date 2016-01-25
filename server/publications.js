@@ -6,6 +6,6 @@ Meteor.publish('restaurants' , function(){
 
 
 // Publish Signle Restaurant
-//Meteor.publish('restaurant' , function(_id){
-//    return TastingKauai.Collections.Restaurants.find({_id:_id});
-//});
+Meteor.publish('restaurant' , function(_id){
+    return TastingKauai.Collections.Restaurants.find({_id:_id});
+});
