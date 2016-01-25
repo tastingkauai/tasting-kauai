@@ -11,4 +11,5 @@ body.android .map-container{
 }
 .map-overlay .card{
     margin-bottom: 5px;
+    background: #FFF !important;
 }
