@@ -36,14 +36,7 @@ Template.layout.events({
 //    }
 });
 
-// Template rendered
-Template.layout.rendered = function(){
-    //console.log( '@@@', this );
-    if( this.data.hideLoadingScreen ){
-        //console.log( 'hiding loading screen' );
-        $('.placeholder').hide();
-    }
-}
+
 
 // Template created
 Template.layout.created = function(){

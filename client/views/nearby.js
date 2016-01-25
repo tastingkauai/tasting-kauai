@@ -9,6 +9,12 @@ Template.nearby.events({
 
 Template.nearby.rendered = function(){
 
+    //console.log( '@@@', this, this.data, this.data.hideLoadingScreen );
+    if( this.data.hideLoadingScreen ){
+        //console.log( 'hiding loading screen' );
+        $('.placeholder').hide();
+    }
+
     Cartographer.onMarkerClick(function(marker){
         var restaurant = TastingKauai.Collections.Restaurants.findOne({_id:marker.get('_id')});
         Session.set('currentSelection',restaurant);
