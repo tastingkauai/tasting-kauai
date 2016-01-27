@@ -1,9 +1,9 @@
 Template.restaurants.rendered = function(){
 
 
-        $('[hook="restaurants-list"]').find('[hook="load-image"]').each(function () {
-            TastingKauai.loadCoverImage( $(this), $(this).attr('hook-load-image-data') );
-        });
+        //$('[hook="restaurants-list"]').find('[hook="load-image"]').each(function () {
+        //    TastingKauai.loadCoverImage( $(this), $(this).attr('hook-load-image-data') );
+        //});
 
 }
 
@@ -22,17 +22,44 @@ Template.restaurants.events({
             activeFilters[filter] = true;
         }
         Session.set('activeFilters',activeFilters);
-        $('[hook="restaurants-list"]').find('[hook="load-image"]').each(function () {
-            TastingKauai.loadCoverImage( $(this), $(this).attr('hook-load-image-data') );
-        });
+        //$('[hook="restaurants-list"]').find('[hook="load-image"]').each(function () {
+        //    TastingKauai.loadCoverImage( $(this), $(this).attr('hook-load-image-data') );
+        //});
 
     },
     'click [hook="reset-filters"]': function(evt,tmpl){
         evt.preventDefault();
+        $(['[hook="search-by-name"]']).val('');
         Session.set('activeFilters',false);
-        $('[hook="restaurants-list"]').find('[hook="load-image"]').each(function () {
-            TastingKauai.loadCoverImage( $(this), $(this).attr('hook-load-image-data') );
-        });
+        //$('[hook="restaurants-list"]').find('[hook="load-image"]').each(function () {
+        //    TastingKauai.loadCoverImage( $(this), $(this).attr('hook-load-image-data') );
+        //});
+    },
+    'change [hook="search-by-name"]': function(evt, tmpl){
+        var activeFilters = Session.get('activeFilters');
+        if( !activeFilters ){
+            activeFilters = {};
+        }
+        activeFilters['name'] = evt.target.value;
+        Session.set('activeFilters',activeFilters);
+        //console.log( '@@@ name set to ' + evt.target.value );
+    },
+    'change [hook="search-by-region"]': function(evt, tmpl){
+        var activeFilters = Session.get('activeFilters');
+        if( !activeFilters ){
+            activeFilters = {};
+        }
+        //alert( evt.target.value );
+        if( evt.target.value == 'all' ){
+            Session.set('activeFilters',activeFilters);
+        }else{
+            activeFilters['region'] = evt.target.value;
+            Session.set('activeFilters',activeFilters);
+        }
+        //activeFilters['region'] = evt.target.value;
+        //Session.set('activeFilters',activeFilters);
+        //console.log( '@@@ ???region set to ' + evt.target.value );
+        //console.log( '@@@ !!!!region set to ' + $(evt.target).val() );
     }
 });
 

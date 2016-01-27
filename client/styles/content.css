@@ -40,6 +40,9 @@ body.android .content{
     background-position: center center;
     background-size: cover;
 }
+.cover-photo.compact {
+    height: 110px;
+}
 
 .coffeeshop {
     /*padding: 10px 10px 0 10px;*/

@@ -4,6 +4,10 @@ Template.nearby.events({
         Cartographer.centerMap( 21.971167, -159.356483 );
         var newCenter = new plugin.google.maps.LatLng( 21.971167, -159.356483 );
         Session.set('center', newCenter );
+    },
+    'click [hook="clear-selection"]': function(evt){
+        evt.preventDefault();
+        Session.set( 'currentSelection', false );
     }
 });
 
@@ -87,6 +91,12 @@ Template.nearby.helpers({
     },
     currentSelection: function(){
         return Session.get( 'currentSelection' );
+    },
+    currentRestaurant: function(){
+        if( Session.get( 'currentSelection' ) ){
+            var curSel = Session.get( 'currentSelection' );
+            return TastingKauai.Collections.Restaurants.findOne(curSel._id);
+        }
     }
 });
 
