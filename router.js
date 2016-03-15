@@ -176,7 +176,7 @@ var appDownloadRedirect = function(){
     }
     this.next();
 }
-//
-//Router.onBeforeAction(appDownloadRedirect, {
-//    except: ['download','admin', 'restaurantUpdate', 'restaurantCreate']
-//});
+
+Router.onBeforeAction(appDownloadRedirect, {
+    except: ['download','admin', 'restaurantUpdate', 'restaurantCreate']
+});
