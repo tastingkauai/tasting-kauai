@@ -1,10 +1,7 @@
 // ROUTER OPTIONS
 Router.configure({
     layoutTemplate: 'layout',
-    loadingTemplate: 'loading',
-    waitOn: function(){
-        return [ Meteor.subscribe('restaurants') ];
-    }
+    loadingTemplate: 'loading'
 });
 
 // HOME
@@ -22,28 +19,28 @@ Router.route( '/how-to', {
     name:'howTo'
 });
 
-// HOW TO
+// ABOUT
 Router.route( '/about', {
     name:'about'
 });
 
-// HOW TO
+// OVERVIEW
 Router.route( '/overview', {
     name:'overview'
 });
 
-// HOW TO
+// LEGEND
 Router.route( '/legend', {
     name:'legend'
 });
 
-// HOW TO
+// FOOD BANK
 Router.route( '/food-bank', {
     name:'foodBank'
 });
 
 
-// HOW TO
+// LANGUAGE
 Router.route( '/language', {
     name:'language'
 });
@@ -52,56 +49,56 @@ Router.route( '/language', {
 
 
 
-// HOW TO
+// FOOD TOURS
 Router.route( '/food-tours', {
     name:'foodTours'
 });
 
-// HOW TO
+// FOOD TOUR: NORTH SHORE
 Router.route( '/food-tours/north-shore', {
     name:'foodToursNorthShore'
 });
 
 
-// HOW TO
+// FOOD TOUR: SOUTH SHORE
 Router.route( '/food-tours/south-shore', {
     name:'foodToursSouthShore'
 });
 
 
-// HOW TO
+// FARMERS MARKET
 Router.route( '/food-tours/farmers-market', {
     name:'foodToursFarmersMarket'
 });
 
-// HOW TO
+// FOOD TOUR: EAST SIDE
 Router.route( '/food-tours/east-side', {
     name:'foodToursEastSide'
 });
 
-// HOW TO
+// FOOD TOUR: SHORT ORDER
 Router.route( '/food-tours/short-order', {
     name:'foodToursShortOrder'
 });
 
 
 
-// HOW TO
+// CHOOSE
 Router.route( '/choose', {
     name:'choose'
 });
 
-// HOW TO
+// MORE
 Router.route( '/more', {
     name:'more'
 });
 
-// HOW TO
+// ACKNOWLEDGEMENTS
 Router.route( '/acknowledgements', {
     name:'acknowledgements'
 });
 
-// HOW TO
+// GLOSSARY
 Router.route( '/glossary', {
     name:'glossary'
 });
@@ -112,23 +109,29 @@ Router.route( '/download', {
 });
 
 
-// NEARBY
+// NEARBY: MAP
 Router.route( '/nearby', {
     name:'nearby',
     //layoutTemplate: 'layoutNoLoading'
+    waitOn: function(){
+        return [ Meteor.subscribe('restaurant-map') ];
+    },
     data: function(){
         return { hideLoadingScreen: true };
     }
 });
 
-// NEARBY
+// INTRO
 Router.route( '/intro', {
     name:'intro'
 });
 
-// DOWNLOAD
+// ADMIN
 Router.route( '/admin', {
     name:'admin',
+    waitOn: function(){
+        return [ Meteor.subscribe('restaurant-list') ];
+    },
     data: function(){
         return {
             restaurants: TastingKauai.Collections.Restaurants.find({},{sort:{name:1}})
@@ -136,19 +139,20 @@ Router.route( '/admin', {
     }
 });
 
-// DOWNLOAD
+// RESTAURANTS
 Router.route( '/restaurants', {
     name:'restaurants',
-    data: function(){
-        return {
-            restaurants: TastingKauai.Collections.Restaurants.find()
-        }
+    waitOn: function(){
+        return [ Meteor.subscribe('restaurant-list') ];
     }
 });
 
 // RESTAURANT VIEW
 Router.route( '/restaurant/:_id', {
     name: 'restaurant',
+    waitOn: function(){
+        return [ Meteor.subscribe('restaurant', this.params._id) ];
+    },
     data: function(){
         return TastingKauai.Collections.Restaurants.findOne(this.params._id);
     }
@@ -157,6 +161,9 @@ Router.route( '/restaurant/:_id', {
 // RESTAURANT UPDATE
 Router.route( '/restaurant/update/:_id', {
     name: 'restaurantUpdate',
+    waitOn: function(){
+        return [ Meteor.subscribe('restaurant', this.params._id) ];
+    },
     data: function(){
         return TastingKauai.Collections.Restaurants.findOne(this.params._id);
     }
@@ -166,8 +173,6 @@ Router.route( '/restaurant/update/:_id', {
 Router.route( '/restaurants/create/', {
     name: 'restaurantCreate'
 });
-
-
 
 
 var appDownloadRedirect = function(){
