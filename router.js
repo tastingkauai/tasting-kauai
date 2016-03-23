@@ -112,12 +112,12 @@ Router.route( '/download', {
 // NEARBY: MAP
 Router.route( '/nearby', {
     name:'nearby',
-    //layoutTemplate: 'layoutNoLoading'
-    waitOn: function(){
-        return [ Meteor.subscribe('restaurant-map') ];
-    },
     data: function(){
         return { hideLoadingScreen: true };
+    },
+    onBeforeAction: function(){
+        Meteor.subscribe('restaurant-map');
+        this.next();
     }
 });
 
@@ -142,19 +142,21 @@ Router.route( '/admin', {
 // RESTAURANTS
 Router.route( '/restaurants', {
     name:'restaurants',
-    waitOn: function(){
-        return [ Meteor.subscribe('restaurant-list') ];
+    onBeforeAction: function(){
+        Meteor.subscribe('restaurant-list');
+        this.next();
     }
 });
 
 // RESTAURANT VIEW
 Router.route( '/restaurant/:_id', {
     name: 'restaurant',
-    waitOn: function(){
-        return [ Meteor.subscribe('restaurant', this.params._id) ];
-    },
     data: function(){
         return TastingKauai.Collections.Restaurants.findOne(this.params._id);
+    },
+    onBeforeAction: function(){
+        Meteor.subscribe('restaurant', this.params._id);
+        this.next();
     }
 });
 
