@@ -42,7 +42,6 @@ Template.restaurants.events({
         }
         activeFilters['name'] = evt.target.value;
         Session.set('activeFilters',activeFilters);
-        //console.log( '@@@ name set to ' + evt.target.value );
     },
     'change [hook="search-by-region"]': function(evt, tmpl){
         var activeFilters = Session.get('activeFilters');
@@ -56,10 +55,6 @@ Template.restaurants.events({
             activeFilters['region'] = evt.target.value;
             Session.set('activeFilters',activeFilters);
         }
-        //activeFilters['region'] = evt.target.value;
-        //Session.set('activeFilters',activeFilters);
-        //console.log( '@@@ ???region set to ' + evt.target.value );
-        //console.log( '@@@ !!!!region set to ' + $(evt.target).val() );
     }
 });
 

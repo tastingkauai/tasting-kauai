@@ -258,7 +258,6 @@ Template.registerHelper('autoCheck',function( args ){
  * returns value for selected attr of select element
  */
 UI.registerHelper('autoSelectOption', function( args ) {
-    ////console.log( 'option =>', args.hash.option, 'value =>', args.hash.value );
     if( args.hash.option == args.hash.value ){
         return 'selected';
     }else{

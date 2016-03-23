@@ -1,9 +1,6 @@
 Template.header.helpers({
     back: function(){
-        console.log('@@@ back helper...');
         var history = Segue.history.get();
-        console.log(history);
-        console.log('@@@ length int ' + history.length);
         if( history.length > 0 ){
             return true;
         }else{

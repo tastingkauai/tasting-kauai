@@ -13,9 +13,7 @@ Template.nearby.events({
 
 Template.nearby.rendered = function(){
 
-    //console.log( '@@@', this, this.data, this.data.hideLoadingScreen );
     if( this.data.hideLoadingScreen ){
-        //console.log( 'hiding loading screen' );
         $('.placeholder').hide();
     }
 

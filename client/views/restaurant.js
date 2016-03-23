@@ -36,11 +36,6 @@ Template.restaurant.helpers({
 });
 
 Template.restaurant.rendered = function(){
-
-    //$('.content').find('[hook="load-image"]').each(function () {
-    //    TastingKauai.loadCoverImage( $(this), $(this).attr('hook-load-image-data') );
-    //});
-
     var tmpl = this;
     var service = new google.maps.places.PlacesService(GoogleMaps.maps.restaurantMap.instance);
     // We will request coffeeshop details using the Google Place ID
