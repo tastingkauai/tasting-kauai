@@ -7,7 +7,7 @@ App.info({
     author: 'Zendy Web Studio',
     email: 'webmaster@zendy.net',
     website: 'https://www.tastingkauai.com/',
-    version: '1.1'
+    version: '1.1.6'
 });
 
 App.icons({
@@ -28,6 +28,10 @@ App.launchScreens({
     'iphone5': 'assets/iphone/launchscreen-640x1136.png',
     'iphone6': 'assets/iphone/launchscreen-750x1334.png',
     'iphone6p_portrait': 'assets/iphone/launchscreen-1242x2208.png',
+    'ipad_portrait': 'assets/iphone/launchscreen-768x1024.png',
+    'ipad_portrait_2x': 'assets/iphone/launchscreen-1536x2048.png',
+    'ipad_landscape': 'assets/iphone/launchscreen-1024x768.png',
+    'ipad_landscape_2x': 'assets/iphone/launchscreen-2048x1536.png',
     'android_ldpi_portrait': 'assets/android/launchscreen-200x320.png',
     'android_ldpi_landscape': 'assets/android/launchscreen-320x200.png',
     'android_mdpi_portrait': 'assets/android/launchscreen-320x480.png',

@@ -13,6 +13,7 @@ Template.nearby.events({
 
 Template.nearby.rendered = function(){
 
+
     if( this.data.hideLoadingScreen ){
         $('.placeholder').hide();
     }
@@ -56,7 +57,7 @@ Template.nearby.helpers({
         if (Session.get('currentSelection')) {
             var currentSelection = Session.get('currentSelection');
             Session.set('center', new plugin.google.maps.LatLng(currentSelection.lat, currentSelection.lng));
-        }else if (!Session.get('center')) {
+        }else{
             Session.set('center', Geolocation.latLng());
         }
 

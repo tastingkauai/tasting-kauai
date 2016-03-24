@@ -84,10 +84,12 @@
                 {{/each}}
             </ul>
         {{else}}
-            <div class="details">
-                <h4>Nothing Found</h4>
-                <p><a href="#" hook="reset-filters" class="button">Reset Filters</a></p>
-            </div>
+            {{#if activeFilters}}
+                <div class="details">
+                    <h4>Nothing Found</h4>
+                    <p><a href="#" hook="reset-filters" class="button">Reset Filters</a></p>
+                </div>
+            {{/if}}
         {{/if}}
     </div>
 
