@@ -57,6 +57,7 @@ Template.nearby.helpers({
     },
     center: function(){
         if (Session.get('currentSelection')) {
+
             console.log('@@@ Center 1');
             var currentSelection = Session.get('currentSelection');
             Session.set('center', new plugin.google.maps.LatLng(currentSelection.lat, currentSelection.lng));
@@ -66,7 +67,6 @@ Template.nearby.helpers({
             Session.set('center', Geolocation.latLng());
         }
         console.log('@@@ Center done');
-
         return Session.get('center');
     },
     mapOptions: function(){
