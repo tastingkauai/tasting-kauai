@@ -1,0 +1,25 @@
+<template name="more">
+
+    {{>header pageTitle="More Resources"}}
+
+    <div class="content">
+
+        <div class="details">
+
+            <div class="card">
+                <ul class="table-view">
+                    <li class="table-view-cell"><a href="http://www.amazon.com/gp/product/0989448614/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0989448614&linkCode=as2&tag=zendy04-20&linkId=UVVX5L3ZYNQHLPDX" hook="dispatch" class="navigate-right-external">Buy our book in print</a></li>
+                    <li class="table-view-cell"><a href="{{pathFor 'glossary'}}" class="navigate-right">Glossary</a></li>
+                    <li class="table-view-cell"><a href="{{pathFor 'language'}}" class="navigate-right">Hawaiian Language</a></li>
+                    <li class="table-view-cell"><a href="{{pathFor 'foodBank'}}" class="navigate-right">Hawaii Food Bank</a></li>
+                    <li class="table-view-cell"><a href="{{pathFor 'howTo'}}" class="navigate-right">How to use this app</a></li>
+                    <li class="table-view-cell"><a href="{{pathFor 'about'}}" class="navigate-right">About Tasting Kauai</a></li>
+                    <li class="table-view-cell"><a href="{{pathFor 'acknowledgements'}}" class="navigate-right">Acknowledgements</a></li>
+                </ul>
+            </div>
+
+            <p style="color: #BBB !important; font-weight:bold; text-align: right; padding-right: 11px; margin-top: -8px; font-size: 10px; font-family: 'Courier New', monospace">Version 1.1 &nbsp;&bull;&nbsp; Build 1.1.14</p>
+
+        </div>
+    </div>
+</template>

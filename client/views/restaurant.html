@@ -1,0 +1,63 @@
+<template name="restaurant">
+
+    {{>header pageTitle=name}}
+
+
+
+    <div class="content">
+
+
+        <!-- Cover photo -->
+        {{>coverPhoto restaurant=this showIcons=true}}
+
+
+
+        <div class="details">
+            <div class="card">
+                <ul class="table-view">
+                    {{#if hours}}
+                        {{#if showHours}}
+                            <li class="table-view-cell">
+                                <a href="#" hook="toggle-hours">
+                                    {{openNow}} <span id="toggle-arrow" class="icon icon-down"></span><br>
+                                    <small>
+                                        <div id="hours-box">
+                                            {{#each hours}}
+                                                {{this}}<br>
+                                            {{/each}}
+                                            <span class="red"><small>BUSINESS HOURS PROVIDED BY GOOGLE</small></span>
+                                        </div>
+                                    </small>
+                                </a>
+                            </li>
+                        {{/if}}
+                    {{/if}}
+                    <li class="table-view-cell"><a href="{{pathFor 'nearby'}}" hook="map-view" class="navigate-right">Map</a></li>
+                    <li class="table-view-cell"><a href="#" hook="directions" hook-data-destination="{{address}}" class="navigate-right-external">Directions</a></li>
+                    <li class="table-view-cell"><a href="tel:{{stripPhone phone}}" class="navigate-right-external">Call</a></li>
+                </ul>
+            </div>
+
+            <div class="description">
+                {{textareaToHTML description}}
+            </div>
+
+
+            {{#if images}}
+                <div class="images">
+                    {{#each images}}
+                        <img src="{{this}}" />
+                    {{/each}}
+                </div>
+            {{/if}}
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+</template>

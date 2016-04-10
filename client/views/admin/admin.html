@@ -1,0 +1,25 @@
+<template name="admin">
+    <a href="/admin">{{> header pageTitle="Admin Area"}}</a>
+    <div class="content">
+        {{> loginButtons}}
+        {{#if currentUser}}
+            <ul class="table-view coffeeshops">
+                <!--<li class="table-view-cell">-->
+                    <!--<a href="#" hook="reset-database" class="navigate-right" style="padding-top: 25px; padding-bottom:25px; text-transform: uppercase">Reset Database</a>-->
+                <!--</li>-->
+                <li class="table-view-cell">
+                    <a href="{{pathFor 'restaurantCreate'}}" class="navigate-right" style="padding-top: 25px; padding-bottom:25px; text-transform: uppercase">Add A New Restaurant</a>
+                </li>
+                {{#each restaurants}}
+                    <li class="table-view-cell">
+                        <a href="{{pathFor 'restaurantUpdate' _id=_id}}" class="navigate-right">
+                            <b>{{name}}</b><br>
+                            <span class="region">{{getRegionFromZip zip}}</span> <small style="font-size:8px;position:relative;bottom:1px;">&bull;</small>
+                            <span class="city">{{city}}</span>
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </div>
+</template>

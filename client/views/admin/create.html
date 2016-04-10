@@ -1,0 +1,12 @@
+<template name="restaurantCreate">
+    {{> header pageTitle="Admin Area"}}
+    <div class="content">
+        {{> loginButtons}}
+        {{#if currentUser}}
+            <section class="admin-form">
+                <h1>Add New Restaurant</h1>
+                {{> form}}
+            </section>
+        {{/if}}
+    </div>
+</template>

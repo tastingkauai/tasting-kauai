@@ -1,0 +1,67 @@
+<template name="foodTours">
+    {{>header pageTitle="Food Tours"}}
+    <div class="content">
+        <ul>
+            <li class="coffeeshop">
+                <a href="{{pathFor 'foodToursNorthShore'}}" class="navigate-right">
+                    <div class="cover-photo" style="background-image:url('/img/food-tours/north-shore.jpg')">
+                        <div class="cover">
+                            <h1 class="coffeeco">
+                                North Shore Food Tour<br>
+                                <span class="region">Tuesdays<br>11AM to 3PM</span>
+                            </h1>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="coffeeshop">
+                <a href="{{pathFor 'foodToursSouthShore'}}" class="navigate-right">
+                    <div class="cover-photo" style="background-image:url('/img/food-tours/south-shore.jpg')">
+                        <div class="cover">
+                            <h1 class="coffeeco">
+                                South Shore Food Tour<br>
+                                <span class="region">Wednesdays<br>1:15PM to 5PM</span>
+                            </h1>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="coffeeshop">
+                <a href="{{pathFor 'foodToursFarmersMarket'}}" class="navigate-right">
+                    <div class="cover-photo" style="background-image:url('/img/food-tours/farmers-market.jpg')">
+                        <div class="cover">
+                            <h1 class="coffeeco">
+                                Farmers Market Food Tour<br>
+                                <span class="region">Wednesdays<br>3PM to 4PM</span>
+                            </h1>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="coffeeshop">
+                <a href="{{pathFor 'foodToursEastSide'}}" class="navigate-right">
+                    <div class="cover-photo" style="background-image:url('/img/food-tours/east-side.jpg')">
+                        <div class="cover">
+                            <h1 class="coffeeco">
+                                Royal Coconut Coast Food Tour<br>
+                                <span class="region">Once Per Month, on a Thursday<br>12PM to 4:30PM</span>
+                            </h1>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="coffeeshop">
+                <a href="{{pathFor 'foodToursShortOrder'}}" class="navigate-right">
+                    <div class="cover-photo" style="background-image:url('/img/food-tours/short-order.jpg')">
+                        <div class="cover">
+                            <h1 class="coffeeco">
+                                Short Order Food Tour<br>
+                                <span class="region">Three Thursdays per month<br>1PM to 3PM</span>
+                            </h1>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</template>

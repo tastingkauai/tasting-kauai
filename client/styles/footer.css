@@ -1,0 +1,67 @@
+/* FOOTER */
+
+.bar-tab {
+    box-sizing: border-box;
+    background: #710003 !important;
+    /*border-top: 1px solid rgba(0, 0, 0, 0.1);*/
+}
+
+/* .tab-item {border-top: 1px solid rgba(0, 0, 0, 0.3);} */
+
+/*.tab-item:first-of-type {border-right: 1px solid rgba(0, 0, 0, 0.3);}*/
+/*.tab-item:last-of-type {border-left: 1px solid rgba(255, 255, 255, 0.3);}*/
+
+/*.tab-item:active {*/
+/*background: #710003;*/
+/*box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);*/
+/*}*/
+.bar-tab .tab-item.active,
+.bar-tab .tab-item.active .fa,
+.bar-tab .tab-item.active span{
+    background: #3c0001;
+}
+
+span.tab-label, .bar-tab .tab-item .icon ~ .tab-label{
+    font-size: 11px;
+    color: white;
+    padding: 3px;
+}
+
+.fa{
+    font-size: 13px;
+    color: #fff;
+    padding-top: 5px;
+    text-align: center;
+    display: block;
+}
+
+body.android #footer.bar-tab{
+    top: auto !important;
+    bottom: 0 !important;
+}
+.placeholder{
+    background: #eee;
+    height: calc(100vh - 51px);
+    width: 100%;
+}
+.placeholder div{
+    color: #CCC;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.flexbox-container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+
+    align-items: center;
+}

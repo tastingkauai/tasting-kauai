@@ -1,0 +1,37 @@
+.map-container{
+    height: calc(100vh - 114px);
+    background: #f6f6f6;
+}
+body.android .map-container{
+    height: calc(100vh - 94px) !important;
+}
+
+.map-overlay{
+    padding: 0;
+    padding-bottom: 9px;
+    position: relative;
+}
+.map-overlay .card{
+    margin-bottom: 5px;
+    background: #FFF !important;
+}
+.clear-selection{
+    width: 30px;
+    height: 30px;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    border: 2px solid #fff;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    z-index: 800;
+    border-radius: 50%;
+    text-align:center;
+}
+.clear-selection a{
+    color: #fff !important;
+    font-weight: bold;
+    display: block;
+    line-height: 28px;
+    font-size: 12px;
+}

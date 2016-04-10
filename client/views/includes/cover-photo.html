@@ -1,0 +1,31 @@
+<template name="coverPhoto">
+    {{#if compact}}
+        <div class="cover-photo compact" hook="load-image" hook-load-image-id="{{restaurant._id}}" hook-load-image-data="{{restaurant.coverPhoto}}" style="background-color: {{getRandomColor}}">
+            <div class="cover">
+                <h1 class="coffeeco">
+                    {{restaurant.name}}<br>
+                    <span class="region">{{restaurant.byline}}</span><br>
+                    {{#if showIcons}}
+                        {{>icons restaurant}}
+                    {{/if}}
+                </h1>
+            </div>
+        </div>
+    {{else}}
+        <div  class="cover-photo" hook="load-image" hook-load-image-id="{{restaurant._id}}" hook-load-image-data="{{restaurant.coverPhoto}}" style="background-color: {{getRandomColor}}">
+            <div class="cover">
+                <h1 class="coffeeco">
+                    {{restaurant.name}}<br>
+                    <span class="region">{{restaurant.byline}}</span><br>
+                    <span class="region">{{getRegionFromZip restaurant.zip}}</span> <small style="font-size:8px;position:relative;bottom:1px;">&bull;</small>
+                    <span class="city">{{restaurant.city}}</span><br>
+                    {{#if showIcons}}
+                        {{>icons restaurant}}
+                    {{/if}}
+                </h1>
+            </div>
+        </div>
+    {{/if}}
+
+
+</template>

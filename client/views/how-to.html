@@ -1,0 +1,28 @@
+<template name="howTo">
+
+    {{>header pageTitle="How To Use This App"}}
+
+    <div class="content">
+        <div class="cover-photo" style="background-image:url('/img/book-bg.jpg')">
+            <div class="cover">
+                <h1 class="coffeeco">
+                    How to use this app<br>
+                    <span class="region">Get the most out of our app</span>
+                </h1>
+            </div>
+        </div>
+
+        <div class="details">
+
+            <div class="card">
+                <ul class="table-view">
+                    <li class="table-view-cell"><a href="{{pathFor 'intro'}}" class="navigate-right">Introduction</a></li>
+                    <li class="table-view-cell"><a href="{{pathFor 'overview'}}" class="navigate-right">Restaurant Guide Overview</a></li>
+                    <li class="table-view-cell"><a href="{{pathFor 'choose'}}" class="navigate-right">How we choose restaurants</a></li>
+                    <li class="table-view-cell"><a href="{{pathFor 'legend'}}" class="navigate-right">Understanding the icons</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</template>

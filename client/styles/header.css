@@ -1,0 +1,74 @@
+/* HEADER */
+
+/* .bar {border: none !important;} */
+
+.bar-nav  {
+    width: 100%;
+    background: #710003 !important;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+    padding-top: 20px;
+    height: 64px !important;
+}
+
+body.android .bar-nav{
+    height: 44px !important;
+    padding-top: 0 !important;
+}
+
+.bar-nav h1 {
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 44px;
+}
+
+.icon-left-nav::before {color: white;}
+.icon-right-nav::after {color: white;}
+
+.bar-nav .icon-left-nav::before{
+    position: relative;
+    bottom: 1px;
+}
+.bar .icon{
+    padding: 0;
+    line-height: 44px;
+    font-size: 20px;
+    padding: 0 15px;
+    position: relative;
+    right: 15px;
+}
+
+body.android .title{
+    text-align: center !important;
+    line-height: 42px !important;
+}
+
+body.android .bar .icon{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.bar .icon-search{
+    right: 0;
+    left: 15px;
+    color: #FFF;
+}
+
+.bar .icon-search label{
+    background: dodgerblue;
+    font-size: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    right: 12px;
+    height: 14px;
+    width: 14px;
+    line-height: 14px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.bar-header-secondary{
+    top: 64px !important;
+}

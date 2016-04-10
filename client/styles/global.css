@@ -1,0 +1,55 @@
+body{
+    font-family: "Avenir Next", Arial, sans-serif;
+}
+
+.center{
+    text-align: center;
+}
+
+hr{
+    height: 0px;
+    border:0;
+    border-top: 1px solid #ccc;
+    margin: 30px 0
+}
+h1 {
+    font-size: 1.9em;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 1.7em;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+strong {
+    font-weight: 500;
+}
+
+.red{
+    color: #990000;
+}
+
+.no-arrow:after{
+    display:none !important
+}
+
+a.button{
+    color: #ffffff;
+    font-weight: bold !important;
+}

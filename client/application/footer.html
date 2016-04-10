@@ -1,0 +1,34 @@
+<!-- FOOTER -->
+
+<template name="footer">
+    {{#if placeholder}}
+        <div class="placeholder flexbox-container">
+            <div>LOADING</div>
+        </div>
+    {{/if}}
+    <nav id="footer" class="bar bar-tab">
+
+        <a href="{{pathFor 'home'}}" class="tab-item {{isActive menu='home' active=getCurrentRoute}}">
+            <i class="fa fa-home"></i>
+            <span class="tab-label">Home</span>
+        </a>
+        <a href="{{pathFor 'restaurants'}}" class="tab-item {{isActive menu='restaurants' active=getCurrentRoute}}">
+            <i class="fa fa-cutlery"></i>
+            <span class="tab-label">Restaurants</span>
+        </a>
+        <a href="{{pathFor 'nearby'}}" class="tab-item {{isActive menu='nearby' active=getCurrentRoute}}">
+            <i class="fa fa-street-view"></i>
+            <span class="tab-label">Map</span>
+        </a>
+        <a href="{{pathFor 'foodTours'}}" class="tab-item {{isActive menu='foodTours' active=getCurrentRoute}}">
+            <i class="fa fa-camera-retro"></i>
+            <span class="tab-label">Food Tours</span>
+        </a>
+        <a href="{{pathFor 'more'}}" class="tab-item {{isActive menu='more' active=getCurrentRoute}}">
+            <i class="fa fa-ellipsis-h"></i>
+            <span class="tab-label">More</span>
+        </a>
+
+    </nav>
+
+</template>

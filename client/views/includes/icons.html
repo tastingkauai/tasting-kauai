@@ -1,0 +1,58 @@
+<template name="icons">
+    <a href="{{pathFor 'legend'}}" class="navigate-right no-arrow" >
+        <div class="icons">
+
+            <!-- FOOD SERVICE ICONS -->
+            {{#each foodServiceIcons this}}
+                <img src="{{this}}">
+            {{/each}}
+
+            <!-- PRICE RANGE ICON -->
+            <img src="{{priceRangeIcon this}}">
+
+            <!-- SLIPPAH CODE ICON -->
+            <img src="{{slippahCodeIcon this}}">
+
+            <!-- RESERVATIONS ICON -->
+            {{#with reservationsIcon this}}
+                <img src="{{this}}">
+            {{/with}}
+
+            <!-- ALTERNATIVE DIET ICONS -->
+            {{#each alternativeDietsIcons this}}
+                <img src="{{this}}">
+            {{/each}}
+
+            <!-- WIFI ICON -->
+            {{#with wifiIcon this}}
+                <img src="{{this}}">
+            {{/with}}
+
+            <!-- FOOD TRUCK ICON -->
+            {{#with foodTruckIcon this}}
+                <img src="{{this}}">
+            {{/with}}
+
+            <!-- FARMERS MARKET ICON -->
+            {{#with farmersMarketIcon this}}
+                <img src="{{this}}">
+            {{/with}}
+
+            <!-- HALE AINA ICON -->
+            {{#with haleAinaAwardsIcon this}}
+                <img src="{{this}}">
+            {{/with}}
+
+            <!-- HRC ICON -->
+            {{#with hawaiiRegionalCuisineIcon this}}
+                <img src="{{this}}">
+            {{/with}}
+
+            <!-- FAVORITES ICON -->
+            {{#with favoritesIcon this}}
+                <img src="{{this}}" class="favorite">
+            {{/with}}
+
+        </div>
+    </a>
+</template>
