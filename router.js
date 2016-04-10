@@ -152,9 +152,8 @@ Router.route( '/restaurant/:_id', {
     data: function(){
         return TastingKauai.Collections.Restaurants.findOne(this.params._id);
     },
-    onBeforeAction: function(){
-        Meteor.subscribe('restaurant', this.params._id);
-        this.next();
+    waitOn: function(){
+        return Meteor.subscribe('restaurant', this.params._id);
     }
 });
 

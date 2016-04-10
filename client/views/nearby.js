@@ -51,22 +51,15 @@ Template.nearby.helpers({
                 });
             }
         });
-        console.log('@@@ markers');
-        console.log(markers);
         return markers;
     },
     center: function(){
         if (Session.get('currentSelection')) {
-
-            console.log('@@@ Center 1');
             var currentSelection = Session.get('currentSelection');
             Session.set('center', new plugin.google.maps.LatLng(currentSelection.lat, currentSelection.lng));
         }else{
-            console.log('@@@ Center 2');
-            console.log('@@@' + Geolocation.latLng());
             Session.set('center', Geolocation.latLng());
         }
-        console.log('@@@ Center done');
         return Session.get('center');
     },
     mapOptions: function(){
