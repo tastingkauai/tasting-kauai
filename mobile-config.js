@@ -7,7 +7,7 @@ App.info({
     author: 'Zendy Web Studio',
     email: 'webmaster@zendy.net',
     website: 'https://www.tastingkauai.com/',
-    version: '1.1.15'
+    version: '1.1.17'
 });
 
 App.icons({
