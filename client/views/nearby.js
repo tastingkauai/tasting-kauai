@@ -41,13 +41,15 @@ Template.nearby.helpers({
         var curSel = Session.get('currentSelection');
         var markers = [];
         _.each( restaurants, function( restaurant ) {
-            var iconColor = ( curSel && curSel._id == restaurant._id ) ? 'DarkRed' : 'Gray';
+            var iconURL = ( curSel && curSel._id == restaurant._id ) ? 'http://app.tastingkauai.com/img/marker-active.png' : 'http://app.tastingkauai.com/img/marker-regular.png';
+            var selected = ( curSel && curSel._id == restaurant._id ) ? true : false;
             if( restaurant.lat && restaurant.lng ) {
                 markers.push({
                     _id: restaurant._id,
                     latitude: restaurant.lat,
                     longitude: restaurant.lng,
-                    icon: iconColor
+                    icon: iconURL,
+                    selected: selected
                 });
             }
         });

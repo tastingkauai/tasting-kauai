@@ -264,3 +264,7 @@ UI.registerHelper('autoSelectOption', function( args ) {
         return '';
     }
 });
+
+UI.registerHelper('openNowClass',function( openNow ){
+    return openNow.toLowerCase() == 'open now' ? 'green' : 'red';
+})

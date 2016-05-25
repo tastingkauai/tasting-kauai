@@ -35,3 +35,7 @@ body.android .map-container{
     line-height: 28px;
     font-size: 12px;
 }
+.hiddenMap{
+    height: 0;
+    overflow: hidden;
+}

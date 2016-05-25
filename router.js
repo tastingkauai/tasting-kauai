@@ -150,7 +150,9 @@ Router.route( '/restaurants', {
 Router.route( '/restaurant/:_id', {
     name: 'restaurant',
     data: function(){
-        return TastingKauai.Collections.Restaurants.findOne(this.params._id);
+        var restaurant = TastingKauai.Collections.Restaurants.findOne(this.params._id);
+        console.log(restaurant);
+        return restaurant;
     },
     waitOn: function(){
         return Meteor.subscribe('restaurant', this.params._id);

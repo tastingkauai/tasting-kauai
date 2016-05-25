@@ -49,7 +49,7 @@ Template.restaurantUpdate.events({
         evt.preventDefault();
 
         //Ask user if they want to delete Coffeeshop
-        if (confirm('Permanently delete Coffeeshop?')) {
+        if (confirm('Permanently delete restaurant?')) {
 
             var delResult = TastingKauai.Collections.Restaurants.remove({_id:this._id});
             if( delResult ){

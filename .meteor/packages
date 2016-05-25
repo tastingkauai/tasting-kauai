@@ -23,7 +23,6 @@ fastclick
 fortawesome:fontawesome
 iron:router
 mdg:geolocation
-mdg:reload-on-resume
 meteorhacks:kadira
 zendy:bureaucrat
 zendy:cartographer
@@ -31,3 +30,5 @@ zendy:dispatcher
 zendy:segue
 zendy:segue-ratchet
 dburles:google-maps
+okgrow:router-autoscroll
+mdg:reload-on-resume

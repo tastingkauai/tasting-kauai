@@ -1,3 +1,10 @@
+.green{
+    color: forestgreen;
+}
+.red{
+    color: red;
+    font-weight: bold;
+}
 .content{
     padding-top: 64px !important;
     padding-bottom: 50px !important;

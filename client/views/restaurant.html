@@ -19,7 +19,7 @@
                         {{#if showHours}}
                             <li class="table-view-cell">
                                 <a href="#" hook="toggle-hours">
-                                    {{openNow}} <span id="toggle-arrow" class="icon icon-down"></span><br>
+                                    <span class="{{openNowClass openNow}}">{{openNow}}</span> <span id="toggle-arrow" class="icon icon-down"></span><br>
                                     <small>
                                         <div id="hours-box">
                                             {{#each hours}}
@@ -34,7 +34,12 @@
                     {{/if}}
                     <li class="table-view-cell"><a href="{{pathFor 'nearby'}}" hook="map-view" class="navigate-right">Map</a></li>
                     <li class="table-view-cell"><a href="#" hook="directions" hook-data-destination="{{address}}" class="navigate-right-external">Directions</a></li>
-                    <li class="table-view-cell"><a href="tel:{{stripPhone phone}}" class="navigate-right-external">Call</a></li>
+                    {{#if phone}}
+                        <li class="table-view-cell"><a href="tel:{{stripPhone phone}}" class="navigate-right-external">Call</a></li>
+                    {{/if}}
+                    {{#if website}}
+                        <li class="table-view-cell"><a href="{{website}}" class="navigate-right-external">Website</a></li>
+                    {{/if}}
                 </ul>
             </div>
 
@@ -56,6 +61,10 @@
 
 
 
+    </div>
+
+    <div class="hiddenMap">
+        {{> googleMap name="restaurantMap" options=restaurantMapOptions}}
     </div>
 
 
