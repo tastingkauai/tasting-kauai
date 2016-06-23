@@ -38,7 +38,7 @@
                         <li class="table-view-cell"><a href="tel:{{stripPhone phone}}" class="navigate-right-external">Call</a></li>
                     {{/if}}
                     {{#if website}}
-                        <li class="table-view-cell"><a href="{{website}}" class="navigate-right-external">Website</a></li>
+                        <li class="table-view-cell"><a href="{{website}}" class="navigate-right-external" hook="dispatch">Website</a></li>
                     {{/if}}
                 </ul>
             </div>
