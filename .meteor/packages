@@ -24,7 +24,6 @@ fortawesome:fontawesome
 iron:router
 mdg:geolocation
 meteorhacks:kadira
-zendy:bureaucrat
 zendy:cartographer
 zendy:dispatcher
 zendy:segue
@@ -32,3 +31,4 @@ zendy:segue-ratchet
 dburles:google-maps
 okgrow:router-autoscroll
 mdg:reload-on-resume
+zendy:bureaucrat
