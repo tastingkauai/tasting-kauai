@@ -60,7 +60,7 @@ Template.restaurants.events({
 
 Template.restaurants.helpers({
     'activeFilters': function(){
-        return Session.get('activeFilters');
+        return Session.get('activeFilters')
     },
     'restaurantsToDisplay': function(){
         var activeFilters = Session.get('activeFilters');
