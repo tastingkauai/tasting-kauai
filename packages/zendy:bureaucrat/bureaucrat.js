@@ -25,7 +25,7 @@ Bureaucrat.getFormData = function( formObject ){
         var isCheckbox = $(this).attr('type') === 'checkbox' ? true : false;
         var isChecked = $(this).is(':checked');
 
-        if( isCheckbox || isRadio ){
+        if( isCheckbox ){
             if (isChecked) {
                 value = true;
             } else {
