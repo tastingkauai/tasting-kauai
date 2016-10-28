@@ -82,12 +82,6 @@ Router.route( '/food-tours/east-side', {
     name:'foodToursEastSide'
 });
 
-// FOOD TOUR: SHORT ORDER
-Router.route( '/food-tours/short-order', {
-    name:'foodToursShortOrder'
-});
-
-
 
 // CHOOSE
 Router.route( '/choose', {
