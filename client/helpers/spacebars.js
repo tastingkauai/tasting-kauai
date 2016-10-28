@@ -104,6 +104,29 @@ UI.registerHelper( 'foodServiceIcons', function(restaurant){
 
 });
 
+
+UI.registerHelper( 'dessertsIcon', function(restaurant) {
+
+    var icon;
+    if( restaurant.desserts === true ){
+        icon = '/img/icons/desserts.png';
+    }
+    return icon;
+
+});
+
+
+UI.registerHelper( 'cocktailsIcon', function(restaurant) {
+
+    var icon;
+    if( restaurant.cocktails === true ){
+        icon = '/img/icons/cocktails.png';
+    }
+    return icon;
+
+});
+
+
 UI.registerHelper( 'priceRangeIcon', function(restaurant) {
 
     var icons = [];
@@ -226,27 +249,6 @@ UI.registerHelper( 'favoritesIcon', function(restaurant) {
 
 });
 
-
-UI.registerHelper( 'dessertsIcon', function(restaurant) {
-
-    var icon;
-    if( restaurant.desserts === true ){
-        icon = '/img/icons/desserts.png';
-    }
-    return icon;
-
-});
-
-
-UI.registerHelper( 'cocktailsIcon', function(restaurant) {
-
-    var icon;
-    if( restaurant.cocktails === true ){
-        icon = '/img/icons/cocktails.png';
-    }
-    return icon;
-
-});
 
 UI.registerHelper( 'activeFilterClass', function( args ){
     var activeFilters = Session.get('activeFilters');
