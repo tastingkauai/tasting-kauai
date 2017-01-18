@@ -145,7 +145,7 @@ Router.route( '/restaurant/:_id', {
     name: 'restaurant',
     data: function(){
         var restaurant = TastingKauai.Collections.Restaurants.findOne(this.params._id);
-        console.log(restaurant);
+        //console.log(restaurant);
         return restaurant;
     },
     waitOn: function(){
@@ -172,7 +172,9 @@ Router.route( '/restaurants/create/', {
 
 var appDownloadRedirect = function(){
     if( !Meteor.isCordova ){
-        Router.go('download');
+        if( Meteor.isClient ) {
+            //window.location = 'https://www.tastingkauai.com/';
+        }
     }
     this.next();
 }

@@ -1,0 +1,19 @@
+{
+
+    "public": {
+        "analyticsSettings": {
+            "Google Analytics" : {
+                "trackingId": "UA-45384607-2"
+            }
+        }
+    },
+    "galaxy.meteor.com": {
+        "env": {
+            "MONGO_URL": "mongodb://tastingkauai_dbadmin:ZwjtAJ2dwv52@ds063126-a0.mlab.com:63126,ds063126-a1.mlab.com:63126/tastingkauai?replicaSet=rs-ds063126",
+            "MONGO_OPLOG_URL": "mongodb://oplog-reader:ZwjtAJ2dwv52@ds063126-a0.mlab.com:63126,ds063126-a1.mlab.com:63126/local?authSource=admin&replicaSet=rs-ds063126",
+            "ROOT_URL": "http://app.tastingkauai.com",
+            "TZ": "Pacific/Honolulu"
+        }
+    }
+
+}
