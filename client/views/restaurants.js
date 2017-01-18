@@ -42,7 +42,7 @@ Template.restaurants.events({
         //
     },
     'click': function(evt, tmpl){
-        //console.log('@@@ Click Event');
+        console.log('@@@ Click Event');
     },
     /*
 
@@ -87,7 +87,7 @@ Template.restaurants.events({
 
 
     'click [hook="search-by-name"]': function(evt, tmpl){
-        // alert('Click Search By Name Event');
+        console.log('Click Search By Name Event');
         // Keyboard.show();
         var activeFilters = Session.get('activeFilters');
     },
