@@ -44,9 +44,9 @@ Template.restaurants.events({
 
 		$('.select-by-region-button').html('<span class="glyphicon glyphicon-chevron-down"></span> Select By Region...');
 	},
-	'click': function(evt, tmpl) {
-		console.log('@@@ Click Event');
-	},
+	//'click': function(evt, tmpl) {
+	//	console.log('@@@ Click Event');
+	//},
 	/*
 
 	 touchcancel
@@ -90,7 +90,7 @@ Template.restaurants.events({
 
 
 	'click [hook="search-by-name"]': function(evt, tmpl) {
-		console.log('Click Search By Name Event');
+		//console.log('Click Search By Name Event');
 		// Keyboard.show();
 		var activeFilters = Session.get('activeFilters');
 	},
@@ -102,48 +102,49 @@ Template.restaurants.events({
 		activeFilters['name'] = evt.target.value;
 		Session.set('activeFilters', activeFilters);
 	},
-	// 'change [hook="search-by-region"]': function(evt, tmpl) {
-	// 	// alert('Search By Region Event');
-	// 	// Keyboard.show();
-	// 	var activeFilters = Session.get('activeFilters');
-	// 	if(!activeFilters) {
-	// 		activeFilters = {};
-	// 	}
-	// 	//alert( evt.target.value );
-	// 	if(evt.target.value == 'all') {
-	// 		Session.set('activeFilters', activeFilters);
-	// 	} else {
-	// 		activeFilters['region'] = evt.target.value;
-	// 		Session.set('activeFilters', activeFilters);
-	// 	}
-	// },
-
-	//changed over code from select change to activate on link clicks in my new togglable div,
-	// also made the activFilters object remove region on an all selection.
-	'click .select-by-region-button': function() {
-		$('.select-by-region-options').toggle();
-	},
-	'click .dropdown-item': function(e) {
-		e.preventDefault();
-		var targetVal = $(e.target).html();
-		var dataVal = $(e.target).data().value;
-		$('.select-by-region-button').html('<span class="glyphicon glyphicon-chevron-down"></span> ' + targetVal);
-		$('.select-by-region-options').hide();
-
+	'change [hook="search-by-region"]': function(evt, tmpl) {
+		// alert('Search By Region Event');
+		// Keyboard.show();
 		var activeFilters = Session.get('activeFilters');
-		console.log(activeFilters);
 		if(!activeFilters) {
 			activeFilters = {};
 		}
 		//alert( evt.target.value );
-		if(dataVal == 'all') {
+		if(evt.target.value == 'all') {
 			activeFilters['region'] = '';
 			Session.set('activeFilters', activeFilters);
 		} else {
-			activeFilters['region'] = dataVal;
+			activeFilters['region'] = evt.target.value;
 			Session.set('activeFilters', activeFilters);
 		}
-	}
+	},
+
+	//changed over code from select change to activate on link clicks in my new togglable div,
+	// also made the activFilters object remove region on an all selection.
+	// 'click .select-by-region-button': function() {
+	// 	$('.select-by-region-options').toggle();
+	// },
+	// 'click .dropdown-item': function(e) {
+	// 	e.preventDefault();
+	// 	var targetVal = $(e.target).html();
+	// 	var dataVal = $(e.target).data().value;
+	// 	$('.select-by-region-button').html('<span class="glyphicon glyphicon-chevron-down"></span> ' + targetVal);
+	// 	$('.select-by-region-options').hide();
+	//
+	// 	var activeFilters = Session.get('activeFilters');
+	// 	console.log(activeFilters);
+	// 	if(!activeFilters) {
+	// 		activeFilters = {};
+	// 	}
+	// 	//alert( evt.target.value );
+	// 	if(dataVal == 'all') {
+	// 		activeFilters['region'] = '';
+	// 		Session.set('activeFilters', activeFilters);
+	// 	} else {
+	// 		activeFilters['region'] = dataVal;
+	// 		Session.set('activeFilters', activeFilters);
+	// 	}
+	// }
 });
 
 Template.restaurants.helpers({

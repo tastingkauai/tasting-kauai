@@ -9,17 +9,17 @@
                     <div style="text-align: right;">
                         <button href="#" hook="reset-filters" style="font-size: 13px; color: #cc0000; position: relative; top: -3px;">RESET FILTERS</button>
                     </div>
-                    <!-- <select hook="search-by-region" style="margin-bottom: 0; ">
+                    <select hook="search-by-region" style="margin-bottom: 0; ">
                         <option value="all" {{autoSelectOption option="all" value=activeFilters.region }}>Entire Island</option>
                         <option value="north" {{autoSelectOption option="north" value=activeFilters.region }}>North Shore</option>
                         <option value="east" {{autoSelectOption option="east" value=activeFilters.region }}>East Side</option>
                         <option value="central" {{autoSelectOption option="central" value=activeFilters.region }}>Central</option>
                         <option value="south" {{autoSelectOption option="south" value=activeFilters.region }}>South Shore</option>
                         <option value="west" {{autoSelectOption option="west" value=activeFilters.region }}>West Side</option>
-                    </select> -->
+                    </select>
 
                     <!-- changed the filter from select (which doesnt work on mobile) to a custom buttom and toggling div -->
-                    <button class="select-by-region-button"><span class="glyphicon glyphicon-chevron-down"></span> Select By Region...</button>
+                    <!-- <button class="select-by-region-button"><span class="glyphicon glyphicon-chevron-down"></span> Select By Region...</button>
                     <div class="select-by-region-options" style="display:none; padding-left: 16px;">
                       <a class="dropdown-item" data-value="all">Entire Island</a>
                       <br />
@@ -32,7 +32,7 @@
                       <a class="dropdown-item" data-value="south">South Shore</a>
                       <br />
                       <a class="dropdown-item" data-value="west">West Side</a>
-                    </div>
+                    </div> -->
                 </li>
                 <li class="table-view-cell">
                     <input type="text" hook="search-by-name" placeholder="Search by name" value="{{activeFilters.name}}" style="position: relative; ">

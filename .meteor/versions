@@ -72,7 +72,7 @@ okgrow:router-autoscroll@0.1.8
 ordered-dict@1.0.9
 percolate:momentum@0.7.2
 percolate:momentum-iron-router@0.7.0
-percolate:velocityjs@1.2.1_1
+percolate:velocityjs@1.1.0
 promise@0.8.8
 random@1.0.10
 rate-limit@1.0.6
