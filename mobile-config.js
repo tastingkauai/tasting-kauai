@@ -15,9 +15,17 @@ App.icons({
     'iphone_3x': 'assets/iphone/icon-180x180.png',
     'ipad': 'assets/iphone/icon-76x76.png',
     'ipad_2x': 'assets/iphone/icon-152x152.png',
+    'ipad_pro': 'assets/iphone/icon-167x167.png.png',
+    'ios_settings': 'assets/iphone/icon-29x29.png',
+    'ios_settings_2x': 'assets/iphone/icon-58x58.png',
+    'ios_settings_3x': 'assets/iphone/icon-87x87.png',
+    'ios_spotlight': 'assets/iphone/icon-40x40.png',
+    'ios_spotlight_2x': 'assets/iphone/icon-80x80.png',
     'android_mdpi': 'assets/android/appicon-48x48.png',
     'android_hdpi': 'assets/android/appicon-72x72.png',
-    'android_xhdpi': 'assets/android/appicon-96x96.png'
+    'android_xhdpi': 'assets/android/appicon-96x96.png',
+    'android_xxhdpi': 'assets/android/appicon-144x144.png',
+    'android_xxxhdpi': 'assets/android/appicon-192x192.png'
 
 });
 
