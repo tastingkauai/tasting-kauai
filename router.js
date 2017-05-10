@@ -173,7 +173,7 @@ Router.route( '/restaurants/create/', {
 var appDownloadRedirect = function(){
     if( !Meteor.isCordova ){
         if( Meteor.isClient ) {
-            //window.location = 'https://www.tastingkauai.com/';
+            window.location = 'https://www.tastingkauai.com/';
         }
     }
     this.next();

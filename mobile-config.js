@@ -7,7 +7,8 @@ App.info({
     author: 'Zendy Web Studio',
     email: 'webmaster@zendy.net',
     website: 'https://www.tastingkauai.com/',
-    version: '1.1.37'
+    buildNumber: '123000',
+    version: '1.2.3'
 });
 
 App.icons({
@@ -15,7 +16,7 @@ App.icons({
     'iphone_3x': 'assets/iphone/icon-180x180.png',
     'ipad': 'assets/iphone/icon-76x76.png',
     'ipad_2x': 'assets/iphone/icon-152x152.png',
-    'ipad_pro': 'assets/iphone/icon-167x167.png.png',
+    'ipad_pro': 'assets/iphone/icon-167x167.png',
     'ios_settings': 'assets/iphone/icon-29x29.png',
     'ios_settings_2x': 'assets/iphone/icon-58x58.png',
     'ios_settings_3x': 'assets/iphone/icon-87x87.png',
@@ -34,6 +35,7 @@ App.launchScreens({
     'iphone5': 'assets/iphone/launchscreen-640x1136.png',
     'iphone6': 'assets/iphone/launchscreen-750x1334.png',
     'iphone6p_portrait': 'assets/iphone/launchscreen-1242x2208.png',
+    'iphone6p_landscape': 'assets/iphone/launchscreen-2208x1242.png',
     'ipad_portrait': 'assets/iphone/launchscreen-768x1024.png',
     'ipad_portrait_2x': 'assets/iphone/launchscreen-1536x2048.png',
     'ipad_landscape': 'assets/iphone/launchscreen-1024x768.png',
@@ -43,21 +45,18 @@ App.launchScreens({
     'android_hdpi_portrait': 'assets/android/launchscreen-480x800.png',
     'android_hdpi_landscape': 'assets/android/launchscreen-800x480.png',
     'android_xhdpi_portrait': 'assets/android/launchscreen-720x1280.png',
-    'android_xhdpi_landscape': 'assets/android/launchscreen-1280x720.png'
+    'android_xhdpi_landscape': 'assets/android/launchscreen-1280x720.png',
+    'android_xxhdpi_portrait': 'assets/android/launchscreen-1080x1440.png',
+    'android_xxhdpi_landscape': 'assets/android/launchscreen-1440x1080.png'
 });
 
 App.setPreference('StatusBarOverlaysWebView', 'true');
 App.setPreference('StatusBarStyle', 'lightcontent');
 App.setPreference('StatusBarBackgroundColor', '#710003');
-App.setPreference("KeyboardDisplayRequiresUserAction",false);
+// App.setPreference("KeyboardDisplayRequiresUserAction",false);
 
 App.accessRule('http://*');
 App.accessRule('https://*');
-
-// App.configurePlugin('plugin.google.maps', {
-//     'API_KEY_FOR_IOS': 'AIzaSyBjPmwXl33-n3akqAy5nPvoCeTEY5A1Mm8',
-//     'API_KEY_FOR_ANDROID': 'AIzaSyBZOXKYXAfuCmDZUdcDjuS2pcR1iAk7nRU'
-// });
 
 App.configurePlugin('cordova-plugin-googlemaps', {
     'API_KEY_FOR_IOS': 'AIzaSyBjPmwXl33-n3akqAy5nPvoCeTEY5A1Mm8',

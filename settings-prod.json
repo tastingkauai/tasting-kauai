@@ -1,5 +1,4 @@
 {
-
     "public": {
         "analyticsSettings": {
             "Google Analytics" : {
@@ -9,8 +8,7 @@
     },
     "galaxy.meteor.com": {
         "env": {
-            "MONGO_URL": "mongodb://tastingkauai_dbadmin:ZwjtAJ2dwv52@ds063126-a0.mlab.com:63126,ds063126-a1.mlab.com:63126/tastingkauai?replicaSet=rs-ds063126",
-            "MONGO_OPLOG_URL": "mongodb://oplog-reader:ZwjtAJ2dwv52@ds063126-a0.mlab.com:63126,ds063126-a1.mlab.com:63126/local?authSource=admin&replicaSet=rs-ds063126",
+            "MONGO_URL": "mongodb://tkdbu2:15G5cM17nP493r@ds133241.mlab.com:33241/tkdb",
             "ROOT_URL": "http://app.tastingkauai.com",
             "TZ": "Pacific/Honolulu"
         }
